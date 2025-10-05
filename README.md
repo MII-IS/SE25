@@ -147,7 +147,7 @@ All code contributions must be made through **Pull Requests (PRs)** to ensure co
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project has no license.
 
 ## Team Members
 
