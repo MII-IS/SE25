@@ -36,6 +36,11 @@ First, you need to install VirtualBox on your Ubuntu 24.04 system. You can typic
     ```bash
     sudo VBoxManage extpack install <path_to_extension_pack_file>
     ```
+To install it, just double click on the dowloaded file in the file browser. If you have problems to insttall the Extension PAck they may be due to a version mistmach with VirtualBox. In this case, download and install the latest Virtualbox version from:
+
+```bash
+https://www.virtualbox.org/wiki/Downloads
+```
 
 ### 3. Creating the Windows 11 Virtual Machine
 
