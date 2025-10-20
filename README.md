@@ -29,7 +29,7 @@ The System of Interest is a distributed system composed of two primary component
 
 The following SysML v2 diagram illustrates the high-level structure and the primary data flows of the system:
 
-![SysML v2 Diagram of the SoI](docs/images/sysml_structure.png)
+![SysML v2 Diagram of the SoI](doc/images/sysml_structure.png)
 
 ### Key Operational Scenarios
 
