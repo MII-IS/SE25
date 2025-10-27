@@ -45,14 +45,18 @@ The system is designed to fulfill the following core operational scenarios:
 This repository is structured as a ROS 2 workspace. All custom packages are located within the `src` directory.
 
 ```
-/se25_robot_control
+/se25
 ├── src/
 │   ├── simulation_pkg/      # ROS 2 package for the simulation environment
 │   └── control_pkg/         # ROS 2 package for the control interface and GUI
-├── docs/
+├── models/
+├── images/
+│   └── diagrams/              # Contains diagrams for documentation
+├── deliverables/
 │   ├── SRS.md               # System Requirements Specification
-│   ├── ADD.md               # Architectural Design Document
-│   └── images/              # Contains diagrams for documentation
+│   ├── SDD.md               # Architectural Design Document
+│   └── README.md
+├── doc/
 └── README.md                # This file
 ```
 
