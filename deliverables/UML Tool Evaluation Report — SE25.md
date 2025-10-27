@@ -1,4 +1,4 @@
-# UML Tool Evaluation Report — SE25
+# UML Tool Evaluation Report
 
 ---
 
