@@ -7,22 +7,22 @@
    1.2 [Scope](#12-scope)  
    1.3 [Glossary](#13-glossary)  
    1.4 [References](#14-references)  
-   1.5 [Overview](#15-overview)
+   1.5 [Overview](#15-overview)  
    1.6 [Definitions, Acronyms, and Abbreviations](#16-definitions-acronyms-and-abbreviations)
 
 2. [Overall Description](#2-overall-description)  
    2.1 [Product Perspective](#21-product-perspective)  
    2.2 [Product Functions](#22-product-functions)  
-   2.3 [User Characteristics](#23-user-characteristics)
+   2.3 [User Characteristics](#23-user-characteristics)  
    2.4 [Operational Scenarios](#24-operational-scenarios)  
    2.5 [Constraints](#25-constraints)  
 
 3. [System Requirements](#3-system-requirements)  
-    3.1 [External Interface Requirements](#31-external-interface-requirements)
+    3.1 [External Interface Requirements](#31-external-interface-requirements)  
     3.2 [Functional Requirements (REQ-F-XXX)](#32-functional-requirements)  
     3.3 [Non-Functional Requirements (REQ-N-XXX)](#33-non-functional-requirements)   
 
-4. [Requirements Traceability Matrix (RTM)](#4-requirements-traceability-matrix)  
+4. [Requirements Traceability Matrix (RTM)](#4-requirements-traceability-matrix-rtm)  
 
 ---
 
@@ -99,7 +99,7 @@ The communication between these subsystems is implemented using **ROS 2 Jazzy Ja
 - `/ControlCommands` topic: control interface sends joint commands to the simulation.  
 
 Thus, the system integrates **simulation accuracy** with **user interactivity** while adhering to real-time performance constraints.
-<img width="2335" height="1240" alt="image" src="https://github.com/user-attachments/assets/3f89484b-7c49-4cee-8de7-dac740b4d044" />
+<img width="2335" height="1240" alt="image" src="../images/sysml_structure.png" />
 
 
 
