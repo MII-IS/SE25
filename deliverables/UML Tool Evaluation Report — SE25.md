@@ -81,16 +81,16 @@ Each criterion is scored on a **1–5 scale**.
 #### 2.1.2 Eclipse Papyrus Diagrams
 
 - **Class Diagram:**  
-  <img width="2335" height="1240" alt="Class Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/ClassDiagram.png" />
+  <img width="2335" height="1240" alt="Class Diagram" src="images/ClassDiagram.png" />
 
-- **Sequence Diagrams (4 Scenarios):**  
-  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario1-SD.png" />  
-  <img width="2335" height="1240" alt="Scenario 2" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario2-SD.png" />  
-  <img width="2335" height="1240" alt="Scenario 3" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario3-SD.png" />  
-  <img width="2335" height="1240" alt="Scenario 4" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario4-SD.png" />
+- **Sequence Diagrams (4 Scenarios):** 
+  <img width="2335" height="1240" alt="Scenario 1" src="images/Scenario1-SD.png" />  
+  <img width="2335" height="1240" alt="Scenario 2" src="images/Scenario2-SD.png" />  
+  <img width="2335" height="1240" alt="Scenario 3" src="images/Scenario3-SD.png" />  
+  <img width="2335" height="1240" alt="Scenario 4" src="images/Scenario4-SD.png" />
 
 - **State Machine Diagram:**  
-  <img width="2335" height="1240" alt="State Machine Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/StateMach.png" />
+  <img width="2335" height="1240" alt="State Machine Diagram" src="images/StateMach.png" />
 
 ---
 
@@ -112,13 +112,13 @@ Each criterion is scored on a **1–5 scale**.
 #### 2.2.2 Modelio Diagrams
 
 - **Class Diagram:**  
-  <img width="2335" height="1240" alt="Modelio Class Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Modelio_Class.png" />
+  <img width="2335" height="1240" alt="Modelio Class Diagram" src="images/Modelio_Class.png" />
 
 - **Sequence Diagram:**  
-  <img width="2335" height="1240" alt="Modelio Sequence Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Modelio_Seq.png" />
+  <img width="2335" height="1240" alt="Modelio Sequence Diagram" src="images/Modelio_Seq.png" />
 
 - **State Machine Diagram:**  
-  <img width="2335" height="1240" alt="Modelio State Machine" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Modelio_StateMachine.png" />
+  <img width="2335" height="1240" alt="Modelio State Machine" src="images/Modelio_StateMachine.png" />
 
 ---
 
@@ -140,12 +140,12 @@ Each criterion is scored on a **1–5 scale**.
 #### 2.3.2 IBM Rhapsody Diagrams
 
 - **Class Diagram:**  
-  <img width="2335" height="1240" alt="Modelio Class Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/ClassDiagram_IBM.png" />
+  <img width="2335" height="1240" alt="Modelio Class Diagram" src="images/ClassDiagram_IBM.png" />
 
 - **Sequence Diagram:**
-  <img width="2335" height="1240" alt="Modelio Class Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/SequenceDiagramIBM.png" /> 
+  <img width="2335" height="1240" alt="Modelio Class Diagram" src="images/SequenceDiagramIBM.png" /> 
 - **State Machine Diagram:**  
-  <img width="2335" height="1240" alt="Modelio State Machine" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Statechart_IBM.png" />
+  <img width="2335" height="1240" alt="Modelio State Machine" src="images/Statechart_IBM.png" />
 
 ---
 
