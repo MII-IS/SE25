@@ -82,6 +82,8 @@ Each criterion is scored on a **1–5 scale**.
 
 - **Class Diagram:**  
   <img width="2335" height="1240" alt="Class Diagram" src="images/ClassDiagram.png" />
+  <img src="images/ClassDiagram.png" alt="Class Diagram" width="600">
+
 
 - **Sequence Diagrams (4 Scenarios):**  
   <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario1-SD.png" />  
