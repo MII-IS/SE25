@@ -81,7 +81,7 @@ Each criterion is scored on a **1–5 scale**.
 #### 2.1.2 Eclipse Papyrus Diagrams
 
 - **Class Diagram:**  
-  <img width="2335" height="1240" alt="Class Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/ClassDiagram.png" />
+  <img width="2335" height="1240" alt="Class Diagram" src="images/ClassDiagram.png" />
 
 - **Sequence Diagrams (4 Scenarios):**  
   <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario1-SD.png" />  
