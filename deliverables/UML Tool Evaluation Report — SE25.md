@@ -81,7 +81,7 @@ Each criterion is scored on a **1–5 scale**.
 #### 2.1.2 Eclipse Papyrus Diagrams
 
 - **Class Diagram:**  
-  <img width="2335" height="1240" alt="Class Diagram" src="images/ClassDiagram.png" />
+  <img width="2335" height="1240" alt="Class Diagram" src="https://github.com/MII-IS/SE25/blob/main/images/ClassDiagram.png" />
   <img src="images/ClassDiagram.png" alt="Class Diagram" width="600">
 
 
