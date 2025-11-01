@@ -140,12 +140,12 @@ Each criterion is scored on a **1–5 scale**.
 #### 2.3.2 IBM Rhapsody Diagrams
 
 - **Class Diagram:**  
-  <img width="2335" height="1240" alt="Modelio Class Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/ClassDiagram_IBM.png" />
+  <img width="2335" height="1240" alt="Modelio Class Diagram" src="https://github.com/MII-IS/SE25/blob/main/images/ClassDiagram_IBM.png" />
 
 - **Sequence Diagram:**
-  <img width="2335" height="1240" alt="Modelio Class Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/SequenceDiagramIBM.png" /> 
+  <img width="2335" height="1240" alt="Modelio Class Diagram" src="https://github.com/MII-IS/SE25/blob/main/images/SequenceDiagramIBM.png" /> 
 - **State Machine Diagram:**  
-  <img width="2335" height="1240" alt="Modelio State Machine" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Statechart_IBM.png" />
+  <img width="2335" height="1240" alt="Modelio State Machine" src="https://github.com/MII-IS/SE25/blob/main/images/Statechart%20IBM.png" />
 
 ---
 
