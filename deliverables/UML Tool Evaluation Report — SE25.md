@@ -90,7 +90,7 @@ Each criterion is scored on a **1–5 scale**.
   <img width="2335" height="1240" alt="Scenario 4" src="https://github.com/MII-IS/SE25/blob/main/images/Scenario4-SD.png" />
 
 - **State Machine Diagram:**  
-  <img width="2335" height="1240" alt="State Machine Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/StateMach.png" />
+  <img width="2335" height="1240" alt="State Machine Diagram" src="https://github.com/MII-IS/SE25/blob/main/images/StateMach.png" />
 
 ---
 
@@ -112,13 +112,13 @@ Each criterion is scored on a **1–5 scale**.
 #### 2.2.2 Modelio Diagrams
 
 - **Class Diagram:**  
-  <img width="2335" height="1240" alt="Modelio Class Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Modelio_Class.png" />
+  <img width="2335" height="1240" alt="Modelio Class Diagram" src="https://github.com/MII-IS/SE25/blob/main/images/Modelio_Class.png" />
 
 - **Sequence Diagram:**  
-  <img width="2335" height="1240" alt="Modelio Sequence Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Modelio_Seq.png" />
+  <img width="2335" height="1240" alt="Modelio Sequence Diagram" src="https://github.com/MII-IS/SE25/blob/main/images/Modelio_Seq.png" />
 
 - **State Machine Diagram:**  
-  <img width="2335" height="1240" alt="Modelio State Machine" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Modelio_StateMachine.png" />
+  <img width="2335" height="1240" alt="Modelio State Machine" src="https://github.com/MII-IS/SE25/blob/main/images/Modelio_StateMachine.png" />
 
 ---
 
