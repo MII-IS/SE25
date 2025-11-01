@@ -82,14 +82,12 @@ Each criterion is scored on a **1–5 scale**.
 
 - **Class Diagram:**  
   <img width="2335" height="1240" alt="Class Diagram" src="https://github.com/MII-IS/SE25/blob/main/images/ClassDiagram.png" />
-  <img src="images/ClassDiagram.png" alt="Class Diagram" width="600">
-
 
 - **Sequence Diagrams (4 Scenarios):**  
-  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario1-SD.png" />  
-  <img width="2335" height="1240" alt="Scenario 2" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario2-SD.png" />  
-  <img width="2335" height="1240" alt="Scenario 3" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario3-SD.png" />  
-  <img width="2335" height="1240" alt="Scenario 4" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario4-SD.png" />
+  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario1-SD.png](https://github.com/MII-IS/SE25/blob/main/images/Scenario1-SD.png" />  
+  <img width="2335" height="1240" alt="Scenario 2" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario2-SD.png](https://github.com/MII-IS/SE25/blob/main/images/Scenario2-SD.png" />  
+  <img width="2335" height="1240" alt="Scenario 3" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario3-SD.png](https://github.com/MII-IS/SE25/blob/main/images/Scenario3-SD.png" />  
+  <img width="2335" height="1240" alt="Scenario 4" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/Scenario4-SD.png](https://github.com/MII-IS/SE25/blob/main/images/Scenario4-SD.png" />
 
 - **State Machine Diagram:**  
   <img width="2335" height="1240" alt="State Machine Diagram" src="https://github.com/elisa109/SE25Alumnos/blob/main/docs/images/StateMach.png" />
