@@ -165,6 +165,10 @@ Each criterion is scored on a **1–5 scale**.
 
 ---
 
+  <img width="500" height="900" alt="UML Comparison graph" src="../images/UML_Comparison.png" /> <img width="500" height="900" alt="UML Final Sum graph" src="../images/UML_Sum.png" />
+
+---
+
 ## 4. Recommended Tool
 
 
