@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="RTM" version="4">
+  <OBJECT>
+    <ID name="RTM" mc="Infrastructure.DiagramSet" uid="e6a9db2b-e181-454d-875b-ae81de221a26"/>
+    <PID name="RTM" mc="Standard.Project" uid="1be7c34c-6128-433d-9cbc-46e8b1c5a47a"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[RTM]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
