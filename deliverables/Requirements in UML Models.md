@@ -24,4 +24,4 @@ This view from the `Links Editor` shows all the requirements that are satisfied 
 ### Detail: Requirement REQ-F-005 - Individual Joint Control
 This view from the `Links Editor` shows which scenarios are linked to the requirement `REQ-F-005`.
 
-<img width="2335" height="1240" alt="REQ-F-005 Links" src="[https://github.com/MII-IS/SE25/blob/main/images/req5.png" />
+<img width="2335" height="1240" alt="REQ-F-005 Links" src="https://github.com/MII-IS/SE25/blob/main/images/req5.png" />
