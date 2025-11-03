@@ -10,12 +10,12 @@ The models are organized hierarchically, starting from high-level system specifi
 
 The models are structured as follows:
 
-*   **Requirements/`: ** Contains the SysML Requirement Diagrams that capture the functional and non-functional requirements of the robotic system.
-*   **Use Case/`: ** Includes UML Use Case Diagrams illustrating the interactions between the robot and external actors.
-*   **Structure/`: ** This directory holds the structural design of the system, including:
+*   **Requirements:** Contains the SysML Requirement Diagrams that capture the functional and non-functional requirements of the robotic system.
+*   **Use Case:** Includes UML Use Case Diagrams illustrating the interactions between the robot and external actors.
+*   **Structure:** This directory holds the structural design of the system, including:
     *   **Block Definition Diagrams (BDD):** Defines the system hierarchy and the relationships between different system blocks.
     *   **Internal Block Diagrams (IBD):** Describes the internal structure of the blocks, including their parts, ports, and connectors.
-*   **Behavior/`: ** This section details the dynamic behavior of the system through:
+*   **Behavior:** This section details the dynamic behavior of the system through:
     *   **Activity Diagrams:** Model the flow of control and data between different activities.
     *   **State Machine Diagrams:** Describe the different states an object can be in and the transitions between those states.
     *   **Sequence Diagrams:** Show the interaction between objects in a time-ordered sequence.
