@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Business Architecture" version="4">
+  <OBJECT>
+    <ID name="Business Architecture" mc="Standard.Package" uid="fb947ee1-009b-427d-b1de-b99bd1d22482"/>
+    <PID name="Business Layer" mc="Standard.Package" uid="45868afb-c020-446d-9626-c06cf3d7ee65"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Business Architecture]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Organization" mc="Standard.Package" uid="ad1156a7-d2e5-4649-979e-9e681bac9713"/>
+        <COMPID name="Processes" mc="Standard.Package" uid="40b1b739-4391-467e-9104-578877c46309"/>
+        <COMPID name="Business Function" mc="Standard.Package" uid="da354abf-83a1-4a59-8e7b-4741613f87b6"/>
+        <COMPID name="Locations" mc="Standard.Package" uid="744590a8-05a1-4fbd-985b-4e7fb7e7b92a"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="BusinessArchitecture" mc="Infrastructure.Stereotype" uid="56eadada-ab6d-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="4f15ad49-a120-4f0f-8180-64d80177bb1f"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[In TOGAF, the Business Architecture defines the business strategy, governance, organization, and key business processes.
+All these elements are modeled under this domain, with predefined subdomains.]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

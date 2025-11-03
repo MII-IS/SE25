@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="TogafMacroProcess" version="4">
+  <OBJECT>
+    <ID name="TogafMacroProcess" mc="Infrastructure.Stereotype" uid="669d8f10-9c4c-4aee-b9d5-36fd8a5532d0"/>
+    <PID name="Business Architecture" mc="Infrastructure.Profile" uid="c4b60052-ab6c-11df-9861-0014224f9977"/>
+    <ATTRIBUTES>
+      <ATT name="Image"><![CDATA[res/bmp/profile/macroprocessus48.png]]></ATT>
+      <ATT name="Icon"><![CDATA[res/bmp/profile/macroprocessus16.png]]></ATT>
+      <ATT name="IsHidden">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="LabelKey"><![CDATA[%MacroProcess.label]]></ATT>
+      <ATT name="BaseClassName"><![CDATA[Standard.BpmnCollaboration]]></ATT>
+      <ATT name="Name"><![CDATA[TogafMacroProcess]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Parent">
+        <ID name="TogafElement" mc="Infrastructure.Stereotype" uid="fd8b243a-ab70-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="DefinedTagType">
+        <OBJECT>
+          <ID name="TogafMacroProcess_criticality" mc="Infrastructure.TagType" uid="14efc6c8-cacc-4542-a5cc-a5d70604a2c6"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[criticality]]></ATT>
+            <ATT name="Name"><![CDATA[TogafMacroProcess_criticality]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="TogafMacroProcess_isAutomated" mc="Infrastructure.TagType" uid="d9e6d98a-51b2-43be-8eb0-c11dfec1557a"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[0]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[isAutomated]]></ATT>
+            <ATT name="Name"><![CDATA[TogafMacroProcess_isAutomated]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="TogafMacroProcess_volumetrics" mc="Infrastructure.TagType" uid="5f794eab-8a3b-46e5-8a1f-0c5ea0c404c0"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[volumetrics]]></ATT>
+            <ATT name="Name"><![CDATA[TogafMacroProcess_volumetrics]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="TogafMacroProcess_duration" mc="Infrastructure.TagType" uid="7f55f357-c4de-4d63-ad18-d4c15b497a76"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[duration]]></ATT>
+            <ATT name="Name"><![CDATA[TogafMacroProcess_duration]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="TogafMacroProcess_KPI" mc="Infrastructure.TagType" uid="c0d736ee-0143-4c7d-9dc3-28a99acfccce"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[kpi]]></ATT>
+            <ATT name="Name"><![CDATA[TogafMacroProcess_KPI]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="TogafMacroProcess_used_resources" mc="Infrastructure.TagType" uid="a37d9ce3-17d7-4ea7-b129-5e4ec994cc1f"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[used_resources]]></ATT>
+            <ATT name="Name"><![CDATA[TogafMacroProcess_used_resources]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="TogafMacroProcess_kind" mc="Infrastructure.TagType" uid="f40f34fd-5db9-4aab-8c37-6319c9a83ec8"/>
+          <ATTRIBUTES>
+            <ATT name="ParamNumber"><![CDATA[1]]></ATT>
+            <ATT name="IsQualified">false</ATT>
+            <ATT name="BelongToPrototype">false</ATT>
+            <ATT name="IsHidden">false</ATT>
+            <ATT name="LabelKey"><![CDATA[kind]]></ATT>
+            <ATT name="Name"><![CDATA[TogafMacroProcess_kind]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

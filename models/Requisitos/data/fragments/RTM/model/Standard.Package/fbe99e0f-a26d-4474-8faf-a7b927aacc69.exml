@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="System Use Case" version="4">
+  <OBJECT>
+    <ID name="System Use Case" mc="Standard.Package" uid="fbe99e0f-a26d-4474-8faf-a7b927aacc69"/>
+    <PID name="Application Architecture" mc="Standard.Package" uid="6f4dee4e-fd5c-4fce-93a3-2918f832868e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[System Use Case]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="ApplicationArchitectureDomain" mc="Infrastructure.Stereotype" uid="3d6f7e12-ab91-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="0032a97c-cdc3-4ae6-beae-3fddd2539068"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[System Uses Cases are modeled here.  Roles or actos can be related to Use case. Application component that realize the Use Case can also be shown with a "component realization dependency.]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Application Architecture" version="4">
+  <OBJECT>
+    <ID name="Application Architecture" mc="Standard.Package" uid="6f4dee4e-fd5c-4fce-93a3-2918f832868e"/>
+    <PID name="Application Layer" mc="Standard.Package" uid="96d7a5ea-693b-407f-b91b-549f3d78ad39"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Application Architecture]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Service Data" mc="Standard.Package" uid="90e474d2-1158-426f-9ac1-039d910854a8"/>
+        <COMPID name="System Use Case" mc="Standard.Package" uid="fbe99e0f-a26d-4474-8faf-a7b927aacc69"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="ApplicationArchitecture" mc="Infrastructure.Stereotype" uid="37051f82-ab6d-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="261a01f8-33a8-4c0e-b66a-779066673aa2"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[The application architecture is modeled under this domain. 
+Application components are the main elements modeled, with their provided or required IS services.
+
+Diagrams:
+- Solution Concept diagrams provide a high-level orientation of the solution that is envisaged in order to meet the objectives of the architecture engagement.
+- Application and User Location diagrams show the geographical distribution of applications.
+- Application and User Location diagrams show the geographical distribution of applications.
+- Enterprise Manageability diagrams show how one or more applications interact with application and technology components that support operational management of a solution.
+- Process/System Realization diagrams clearly depict the sequence of events when multiple applications are involved in executing a business process.
+- Project Context diagrams show the scope of a work package to be implemented as a part of a broader transformation roadmap.
+- Benefits diagrams show opportunities identified in an architecture definition, classified according to their relative size, benefit, and complexity. ]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
