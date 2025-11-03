@@ -1,1 +1,3 @@
 .DS_Store
+A .DS_Store file is a hidden file created by macOS to store custom attributes and folder view preferences, such as icon positions and window size. These files are safe to delete because the operating system automatically recreates them when preferences change. However, they can be annoying on Windows PCs, as they may appear and cause synchronization issues with some cloud services.
+On macOS: You can delete them manually via Finder or use the Terminal. Removing these files does not cause data loss.
