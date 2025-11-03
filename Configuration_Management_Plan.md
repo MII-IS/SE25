@@ -27,7 +27,39 @@ The goal is to keep the process **simple, transparent, and efficient**, while en
 
 ---
 
-## 3. Additional Guidelines
+## 3. Change Classification
+
+To simplify decision-making, changes are classified as **minor** or **major**.
+
+### 3.1 Minor Changes (Do *not* require CM approval)
+Minor changes are small, low-risk updates that do **not alter the project’s structure, logic, or deliverables**.
+
+Examples include:
+- Fixing typos, grammar, or formatting in documentation.  
+- Updating links or metadata.  
+- Adjusting comments in code without changing logic.  
+- Minor visual or style tweaks that don’t affect functionality.  
+- Updating a personal or local configuration file.  
+- Adding or updating non-critical notes or examples.  
+
+If the change could slightly affect a teammate’s work, a PR is required **only for visibility and their approval**, not CM approval.
+
+### 3.2 Major Changes (Require CM approval)
+Major changes are significant updates that can impact **project integrity, deliverables, configuration items, or team workflows**.
+
+Examples include:
+- Introducing new features or modules.  
+- Modifying the structure of deliverables or key directories.  
+- Changing interfaces, dependencies, or configuration items.  
+- Updating versioning, naming conventions, or project build settings.  
+- Replacing or removing files that are part of official deliverables.  
+- Any change that alters how the team interacts with or builds the project.  
+
+When in doubt, treat the change as **major** and involve the CM.
+
+---
+
+## 4. Additional Guidelines
 
 - Always communicate upcoming changes in advance (e.g., via issue, chat, or PR comment).
 - Use **clear commit messages** describing *what* changed and *why*.
@@ -37,7 +69,7 @@ The goal is to keep the process **simple, transparent, and efficient**, while en
 
 ---
 
-## 4. Roles
+## 5. Roles
 
 - **Configuration Manager (CM):**  
   - Oversees configuration control.  
@@ -51,9 +83,9 @@ The goal is to keep the process **simple, transparent, and efficient**, while en
 
 ---
 
-## 5. Change Process Summary
+## 6. Change Process Summary
 
-1. Determine the **type of change** (see table above).  
+1. Determine the **type of change** (see Section 2 and 3).  
 2. If a PR is required, assign reviewers according to the rules.  
 3. Once approved, merge following the repository’s merge policy.  
 4. Tag or version releases as needed for configuration traceability.
@@ -61,3 +93,4 @@ The goal is to keep the process **simple, transparent, and efficient**, while en
 ---
 
 *This plan is meant to be lightweight and adaptable. The goal is effective collaboration with minimal bureaucracy.*
+
