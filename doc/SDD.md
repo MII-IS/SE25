@@ -2,7 +2,7 @@
  
 
 
-## 📑 Índice
+## Índice
 
 1. [Introducción](#1-introducción)  
    1.1 [Propósito](#11-propósito)  
