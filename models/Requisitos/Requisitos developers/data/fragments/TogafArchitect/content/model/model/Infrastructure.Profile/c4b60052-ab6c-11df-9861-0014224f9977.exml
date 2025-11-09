@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Business Architecture" version="4">
+  <OBJECT>
+    <ID name="Business Architecture" mc="Infrastructure.Profile" uid="c4b60052-ab6c-11df-9861-0014224f9977"/>
+    <PID name="TogafArchitect" mc="Infrastructure.ModuleComponent" uid="a79b1502-ac66-11df-8037-0014224f9977"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Business Architecture]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DefinedStereotype">
+        <COMPID name="TogafService" mc="Infrastructure.Stereotype" uid="67bbf9b2-ab84-11df-9861-0014224f9977"/>
+        <COMPID name="TogafServiceOperation" mc="Infrastructure.Stereotype" uid="876fa3d2-ab84-11df-9861-0014224f9977"/>
+        <COMPID name="OrganizationParticipant" mc="Infrastructure.Stereotype" uid="62426be2-ab75-11df-9861-0014224f9977"/>
+        <COMPID name="TogafActor" mc="Infrastructure.Stereotype" uid="57451e42-ab75-11df-9861-0014224f9977"/>
+        <COMPID name="TogafEvent" mc="Infrastructure.Stereotype" uid="3f3991b2-ab74-11df-9861-0014224f9977"/>
+        <COMPID name="TogafExternalActor" mc="Infrastructure.Stereotype" uid="7cd6ccf2-ab75-11df-9861-0014224f9977"/>
+        <COMPID name="BusinessOrganizationDomain" mc="Infrastructure.Stereotype" uid="b42187ca-ab75-11df-9861-0014224f9977"/>
+        <COMPID name="TogafInternalActor" mc="Infrastructure.Stereotype" uid="d1a288ca-ab75-11df-9861-0014224f9977"/>
+        <COMPID name="Communicates" mc="Infrastructure.Stereotype" uid="ecabbcb2-ab75-11df-9861-0014224f9977"/>
+        <COMPID name="Initiator" mc="Infrastructure.Stereotype" uid="130cd74a-ab76-11df-9861-0014224f9977"/>
+        <COMPID name="Responsible" mc="Infrastructure.Stereotype" uid="2cbeb9b2-ab76-11df-9861-0014224f9977"/>
+        <COMPID name="Participates" mc="Infrastructure.Stereotype" uid="44beb18a-ab76-11df-9861-0014224f9977"/>
+        <COMPID name="TogafOrganizationUnit" mc="Infrastructure.Stereotype" uid="5413035a-ab76-11df-9861-0014224f9977"/>
+        <COMPID name="TogafRole" mc="Infrastructure.Stereotype" uid="71075a12-ab76-11df-9861-0014224f9977"/>
+        <COMPID name="Assumes" mc="Infrastructure.Stereotype" uid="9becc562-ab76-11df-9861-0014224f9977"/>
+        <COMPID name="Owner" mc="Infrastructure.Stereotype" uid="aee2e942-ab76-11df-9861-0014224f9977"/>
+        <COMPID name="TogafProcess" mc="Infrastructure.Stereotype" uid="b9d7cee1-8fe0-45ec-98fa-ea750d4ab42f"/>
+        <COMPID name="TogafMacroProcess" mc="Infrastructure.Stereotype" uid="669d8f10-9c4c-4aee-b9d5-36fd8a5532d0"/>
+        <COMPID name="TogafProcess_old" mc="Infrastructure.Stereotype" uid="1476e48a-ab77-11df-9861-0014224f9977"/>
+        <COMPID name="TogafExternalRole" mc="Infrastructure.Stereotype" uid="397be8f2-ab77-11df-9861-0014224f9977"/>
+        <COMPID name="TogafInternalRole" mc="Infrastructure.Stereotype" uid="483c6972-ab77-11df-9861-0014224f9977"/>
+        <COMPID name="IOFlow" mc="Infrastructure.Stereotype" uid="3de3f73a-ab84-11df-9861-0014224f9977"/>
+        <COMPID name="TogafBusinessService" mc="Infrastructure.Stereotype" uid="5e5b218a-ab84-11df-9861-0014224f9977"/>
+        <COMPID name="TogafBusinessOperation" mc="Infrastructure.Stereotype" uid="b1abc8ba-ab84-11df-9861-0014224f9977"/>
+        <COMPID name="TogafParticipantDecomposition" mc="Infrastructure.Stereotype" uid="c2ed9fb2-ab84-11df-9861-0014224f9977"/>
+        <COMPID name="TogafConsumes" mc="Infrastructure.Stereotype" uid="d3e7f05a-ab84-11df-9861-0014224f9977"/>
+        <COMPID name="TogafFunction" mc="Infrastructure.Stereotype" uid="fba7837a-ab84-11df-9861-0014224f9977"/>
+        <COMPID name="ServiceProcessSupport" mc="Infrastructure.Stereotype" uid="1a59b07a-ab85-11df-9861-0014224f9977"/>
+        <COMPID name="TogafProduct" mc="Infrastructure.Stereotype" uid="409707ea-ab85-11df-9861-0014224f9977"/>
+        <COMPID name="TogafServiceContract" mc="Infrastructure.Stereotype" uid="544984f2-ab85-11df-9861-0014224f9977"/>
+        <COMPID name="TogafApplicationCollaboration" mc="Infrastructure.Stereotype" uid="44c1d03a-847c-11e1-a738-bc305ba4815c"/>
+        <COMPID name="TogafBusinessCapability" mc="Infrastructure.Stereotype" uid="6fc9ee0a-ab85-11df-9861-0014224f9977"/>
+        <COMPID name="TogafFunctionSequence" mc="Infrastructure.Stereotype" uid="86e504e2-ab85-11df-9861-0014224f9977"/>
+        <COMPID name="TogafLocation" mc="Infrastructure.Stereotype" uid="99a1f082-ab85-11df-9861-0014224f9977"/>
+        <COMPID name="HeadquarterLocation" mc="Infrastructure.Stereotype" uid="b9c34672-ab85-11df-9861-0014224f9977"/>
+        <COMPID name="TogafProcessFlowDiagram" mc="Infrastructure.Stereotype" uid="1dcb7caa-ab86-11df-9861-0014224f9977"/>
+        <COMPID name="TogafOrganizationRoleDiagram" mc="Infrastructure.Stereotype" uid="33776a92-ab86-11df-9861-0014224f9977"/>
+        <COMPID name="TogafFunctionalDecompositionDiagram" mc="Infrastructure.Stereotype" uid="435d2b5a-ab86-11df-9861-0014224f9977"/>
+        <COMPID name="TogafUseCaseDiagram" mc="Infrastructure.Stereotype" uid="6226d8ca-ab87-11df-9861-0014224f9977"/>
+        <COMPID name="TogafBusinessUseCaseDiagram" mc="Infrastructure.Stereotype" uid="76744e2a-ab87-11df-9861-0014224f9977"/>
+        <COMPID name="TogafDataSecurityDiagram" mc="Infrastructure.Stereotype" uid="abd8aae2-ab87-11df-9861-0014224f9977"/>
+        <COMPID name="TogafOrganizationDecompositionDiagram" mc="Infrastructure.Stereotype" uid="d242f932-ab8f-11df-9861-0014224f9977"/>
+        <COMPID name="TogafEventDiagram" mc="Infrastructure.Stereotype" uid="ed5cdd82-ab8f-11df-9861-0014224f9977"/>
+        <COMPID name="TogafBusinessServiceInformationDiagram" mc="Infrastructure.Stereotype" uid="1101070a-ab90-11df-9861-0014224f9977"/>
+        <COMPID name="TogafProductLifeCycleDiagram" mc="Infrastructure.Stereotype" uid="24411392-ab90-11df-9861-0014224f9977"/>
+        <COMPID name="TogafValueChainDiagram" mc="Infrastructure.Stereotype" uid="39f1c62a-ab90-11df-9861-0014224f9977"/>
+        <COMPID name="TogafGoalObjectiveServiceDiagram" mc="Infrastructure.Stereotype" uid="49bd4d2a-ab90-11df-9861-0014224f9977"/>
+        <COMPID name="TogafBusinessFootPrintDiagram" mc="Infrastructure.Stereotype" uid="55da0417-d6c4-11df-ade8-0014224f9977"/>
+        <COMPID name="Part" mc="Infrastructure.Stereotype" uid="6ae70329-d6d0-11df-ae1b-0014224f9977"/>
+        <COMPID name="TogafLocationDiagram" mc="Infrastructure.Stereotype" uid="03153143-0118-11e0-abc2-0014224f9977"/>
+        <COMPID name="ContractOf" mc="Infrastructure.Stereotype" uid="37ed1b4e-0137-11e0-abc2-0014224f9977"/>
+        <COMPID name="TogafParticipantAllocation" mc="Infrastructure.Stereotype" uid="b4c2512d-17e2-11e0-896f-0014224f9977"/>
+        <COMPID name="TogafLocalization" mc="Infrastructure.Stereotype" uid="dc0f6351-17e2-11e0-896f-0014224f9977"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

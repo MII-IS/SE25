@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Business Function" version="4">
+  <OBJECT>
+    <ID name="Business Function" mc="Standard.Package" uid="71da0e49-4bb1-4a65-aba7-382d29c707dd"/>
+    <PID name="Business Architecture" mc="Standard.Package" uid="d89ef3bd-8428-4a6c-a6b7-c973ea6d2005"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Business Function]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="BusinessOrganizationDomain" mc="Infrastructure.Stereotype" uid="b42187ca-ab75-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="97f30d3a-3e51-4d85-8f6c-446bd711a877"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[The "Business functions" domain is used to define business functions and business services.
+
+Diagrams:
+- Fonctional decomposition diagrams are used to summarize the capacities of an organization.
+- Value chain diagrams provide a high-level orientation view of an enterprise and how it interacts with the outside world.
+- Business Service/Information diagrams show the information needed to support one or more business services.
+- Goal/Objective/Service diagrams define the ways in which a service contributes to the achievement of a business vision or strategy. ]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

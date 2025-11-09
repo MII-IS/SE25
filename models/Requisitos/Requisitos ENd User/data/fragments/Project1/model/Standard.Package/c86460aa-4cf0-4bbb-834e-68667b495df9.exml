@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Technology Architecture" version="4">
+  <OBJECT>
+    <ID name="Technology Architecture" mc="Standard.Package" uid="c86460aa-4cf0-4bbb-834e-68667b495df9"/>
+    <PID name="project1" mc="Standard.Package" uid="106c6b1a-f2c4-431b-a339-e86abdbeef06"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Technology Architecture]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="TechnologyArchitecture" mc="Infrastructure.Stereotype" uid="614d3022-ab6d-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="e07f1882-0eee-47fc-84ef-3ddae3c828dc"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[Devices or technology artifacts can be created under the technology architecture. Elements deployed under the devices (typically servers and workstations) will be modeled under this domain.
+
+Diagrams:
+- Environments and Locations diagrams depict which locations host which applications, identifies what technologies and/or applications are used at which locations, and finally identifies the locations from which business users typically interact with the applications.
+- Software Distribution diagrams show how application software is structured and distributed across the estate.
+- Platform Decomposition diagrams depict the technology platform that supports the operations of the Information Systems Architecture. 
+- Network computing hardware diagrams show the as deployed logical view of logical application components in a distributed network computing environment.
+- Processing diagrams focus on deployable units of code/configuration and how these are deployed onto the technology platform.]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
