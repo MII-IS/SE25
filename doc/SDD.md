@@ -33,9 +33,10 @@
    5.4 [Portability](#54-portability)  
 
 6. [Requirements Traceability](#6-requirements-traceability)  
-   6.1 [Requirements-to-Design Traceability Matrix](#61-requirements-to-design-traceability-matrix)  
+   6.1 [Functional Requirements-to-Design Traceability Matrix](#61-functional-requirements-to-design-traceability-matrix)  
+   6.2 [Non-Functional Requirements-to-Design Traceability Matrix](#62-non-functional-requirements-to-design-traceability-matrix)  
 
-7. [Appendices](#7-appendices)  
+8. [Appendices](#7-appendices)  
    7.1 [Additional UML Diagrams](#71-additional-uml-diagrams)  
    7.2 [Technical Glossary](#72-technical-glossary)  
 
@@ -167,42 +168,125 @@ The use of ROS 2, C++, and POSIX threads reflects industry standards for robotic
 ## 4. Detailed Design Specification
 
 ### 4.1 Class and Data Structure Design
-Provide class diagrams and data structure definitions.
+The system is implemented in C++, using object-oriented principles. Each subsystem (Simulation and Control) defines its own set of classes and data structures.
+
+Example Classes:  
+**RobotModel:** Loads and stores URDF data; provides access to joint limits and kinematics.  
+**PhysicsEngine:** Simulates dynamics and detects collisions.  
+**MotionController:** Processes user commands and generates joint trajectories.  
+**GUIManager:** Handles UI events and updates visual elements.
+
+Data Structures:  
+**JointState:** Struct containing position, velocity, and effort for each joint.  
+**Pose:** Struct representing 3D position and orientation.  
+**Trajectory:** List of target poses with timing information.  
+
+
+> **Suggested Diagram:** UML class diagram showing relationships between core classes..
 
 ### 4.2 Key Algorithms
 Describe important algorithms (e.g., control logic, path planning, collision detection).
 
-### 4.3 User Interface (UI)
-Describe the UI design and user interaction flow.
+| Manual Joint Control | Trajectory Planning | Collision Detection | Emergency Stop |
+|------|---|---|---|
+| Maps GUI sliders to joint angles | Interpolates between target poses |
+Publishes commands to /joint_commands topic | Generates time-parameterized joint commands | Uses bounding volumes or mesh intersections | Immediately halts all motion |
+|  | Ensures smooth motion using cubic splines or linear interpolation | Triggers emergency stop if collision is detected | Sends zero-velocity commands to all joints |
 
+> **Suggested Diagram:** Activity diagram for trajectory execution and collision response.
+
+### 4.3 User Interface (UI)
+The UI is built using a GUI framework compatible with ROS 2 (e.g., Qt or rqt). It includes:
+
+- **Joint Control Panel:** Sliders for each joint.
+- **Trajectory Editor:** Allows users to define and preview motion paths.
+- **State Display:** Real-time visualization of robot pose and joint values.
+- **Emergency Stop Button:** Immediately halts robot motion.
+
+
+> **Suggested Elements:** Wireframes or screenshots of the GUI layout.  
 > **Suggested Elements:** Wireframes, flowcharts, screen mockups.
 
 ### 4.4 Error and Exception Handling
-Explain how the system handles errors, faults, and exceptions.
+The system includes robust error-handling mechanisms:
+
+- **ROS 2 Node Failures:** Logged and reported via diagnostics.
+- **Invalid Commands:** Ignored or rejected with warning messages.
+- **Collision Events:** Trigger emergency stop and notify user.
+- **Communication Failures:** Retries or fallback procedures.
+
+All exceptions are logged with timestamps and severity levels. Critical errors halt the system safely.
 
 ---
 
 ## 5. Non-Functional Characteristics
 
 ### 5.1 Security
-Describe security mechanisms (e.g., authentication, data validation, access control).
+Although the SE25 system is not exposed to external networks or sensitive data, basic security measures are implemented to ensure robustness and safe operation:
+
+- **Input Validation:** All user inputs (e.g., joint values, trajectory points) are validated to prevent invalid or unsafe commands.
+- **Emergency Stop Mechanism:** Collision detection triggers an immediate halt of robot motion to prevent damage or instability.
+- **Process Isolation:** ROS 2 nodes run independently, reducing the risk of cascading failures.
+- **Access Control:** Only authorized users (project team members) can modify the codebase via GitHub.
 
 ### 5.2 Performance
-Define performance requirements (e.g., latency, throughput, frame rate).
+The system is designed to meet real-time performance requirements essential for robotic control:
+
+- **Communication Latency:** Less than 50 milliseconds between control and simulation components.
+- **Simulation Frame Rate:** Minimum of 30 frames per second to ensure smooth visualization.
+- **Responsiveness:** GUI updates and command execution occur with minimal delay.
+
+Performance is monitored during integration and testing phases using ROS 2 diagnostics and profiling tools.
 
 ### 5.3 Maintainability
-Explain how the system is designed for ease of maintenance and future updates.
+Maintainability is achieved through modular design and adherence to software engineering best practices:
+
+- **Modular Architecture:** Clear separation between simulation, control, and middleware layers.
+- **Version Control:** Git is used for source code management, with feature branches and pull requests.
+- **Documentation:** Inline comments, README files, and design documents are maintained.
+- **Coding Standards:** Consistent naming conventions and formatting are enforced via code reviews.
 
 ### 5.4 Portability
-Describe supported platforms and portability considerations.
+The system is designed to be portable across standard Linux-based environments:
+
+- **Operating System:** Ubuntu 24.04 LTS
+- **Dependencies:** All libraries and tools (ROS 2, GCC, CMake) are open-source and cross-platform.
+- **Build System:** CMake ensures compatibility across different machines.
+- **Deployment:** The system can be packaged and deployed on any machine with the required environment setup.
 
 ---
 
 ## 6. Requirements Traceability
 
-### 6.1 Requirements-to-Design Traceability Matrix
+### 6.1 Functional Requirements-to-Design Traceability Matrix
 
-| Requirement ID | Design Element | Associated Component |
+| Requirement ID | Description | Design Element | Associated Component |
+|----------------|-------------|----------------|-----------------------|
+| REQ-F-001 | 3D Simulation Environment | `SimulationEngine` | Simulation Subsystem |
+| REQ-F-002 | URDF Model Loading | `RobotModel` | Simulation Subsystem |
+| REQ-F-003 | Graphical User Interface | `GUIManager` | Control Subsystem |
+| REQ-F-004 | Real-time Pose Display | `GUIManager`, `/robot_state` topic | Control Subsystem |
+| REQ-F-005 | Individual Joint Control | `MotionController`, GUI sliders | Control Subsystem |
+| REQ-F-006 | Pose Sequence Execution | `TrajectoryPlanner`, `MotionController` | Control Subsystem |
+| REQ-F-007 | Collision Detection | `PhysicsEngine` | Simulation Subsystem |
+| REQ-F-008 | Emergency Stop on Collision | `MotionController`, `EmergencyStop` logic | Control + Simulation |
+| REQ-F-009 | Teach-In Programming | `PoseRecorder`, GUI interaction | Control Subsystem |
+| REQ-F-010 | Manual Emergency Stop and Recovery | GUI emergency stop button, recovery mode | Control Subsystem |
+| REQ-F-011 | Sequence Pause and Resume | `TrajectoryManager`, GUI controls | Control Subsystem |
+| REQ-F-012 | Status and Notification Panel | GUI status bar | Control Subsystem |
+
+### 6.2 Non-Functional Requirements-to-Design Traceability Matrix
+| Requirement ID | Description | Design Element | Associated Component |
+|----------------|-------------|----------------|-----------------------|
+| REQ-N-001 | Communication Latency < 50ms | ROS 2 configuration | Middleware Layer |
+| REQ-N-002 | Simulation Frame Rate ≥ 30 FPS | Rendering loop, physics engine | Simulation Subsystem |
+| REQ-N-003 | C/C++ on Linux | Build system, OS setup | Development Environment |
+| REQ-N-004 | Use of ROS 2 | ROS 2 nodes and topics | Middleware Layer |
+| REQ-N-005 | POSIX Threads | Multithreading in simulation/control | All Subsystems |
+| REQ-N-006 | Git Version Control | GitHub repository, branching model | Project Infrastructure |
+| REQ-N-007 | Documentation Compliance | SDD, SRS, ADD, QAP, SCMP | Project Documentation |
+| REQ-N-008 | Startup Time < 10s | Initialization scripts | System Core |
+| REQ-N-009 | GUI Responsiveness | GUI event loop, threading | Control Subsystem |
 
 ---
 
@@ -210,4 +294,30 @@ Describe supported platforms and portability considerations.
 
 ### 7.1 Additional UML Diagrams
 
+This section includes supplementary diagrams that support the architectural and detailed design of the system. These may include:
+
+- **Class Diagrams**: Representing the structure of core classes such as `RobotModel`, `MotionController`, `GUIManager`, etc.
+- **Sequence Diagrams**: Showing interactions between GUI, ROS 2 middleware, and simulation during control cycles.
+- **Activity Diagrams**: Illustrating workflows like trajectory execution, collision response, and emergency stop.
+- **Component Diagrams**: Depicting the high-level architecture and ROS 2 node relationships.
+
+> Diagrams should be versioned and stored in the GitHub repository under `/docs/diagrams`.
+
+---
+
 ### 7.2 Technical Glossary
+
+| Term | Definition |
+|------|------------|
+| **SoI** | System of Interest – the robotic simulation and control software |
+| **ROS 2** | Robot Operating System 2 – middleware for distributed robotics |
+| **URDF** | Unified Robot Description Format – XML format for robot models |
+| **GUI** | Graphical User Interface – user-facing control panel |
+| **HMI** | Human-Machine Interface – interaction layer between user and system |
+| **Pose** | Position and orientation of the robot’s end-effector |
+| **Trajectory** | Sequence of poses executed by the robot |
+| **Emergency Stop (E-Stop)** | Immediate halt of robot motion triggered manually or by collision |
+| **Teach-In Programming** | Method of recording poses by manually moving the robot |
+| **RTM** | Requirements Traceability Matrix – links requirements to design and implementation
+
+---
