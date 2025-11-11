@@ -56,8 +56,7 @@ This ensures consistency, easy navigation, and traceability throughout the softw
 ├── doc/                            # General project documentation
 │   ├── README.md
 │   └── References.md
-│
-├── images/                         # Images used in the project
+│   ├── images/                         # Images used in the project
 │  
 │
 ├── ros2_robot_ws/                  # ROS 2 workspace for the system
