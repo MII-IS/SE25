@@ -169,5 +169,3 @@ All official templates are stored in `deliverables/templates/`:
 | 2025-10-15 | v1.2 | Javier Pulido | Minor text and formatting fixes |
 
 ---
-
-*End of Document.*
