@@ -72,6 +72,7 @@ This ensures consistency, easy navigation, and traceability throughout the softw
         ├── PTP – Project Test Plan.md
         ├── UM – User Manual.md
         └── Glossary.md
+```
 ---
 
 ## 5. Naming Conventions
