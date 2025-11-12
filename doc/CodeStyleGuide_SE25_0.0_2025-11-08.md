@@ -41,27 +41,37 @@ This ensures consistency, easy navigation, and traceability throughout the softw
 
 
 ```
-/se25-robot-simulation/
-├── deliverables/
-│   ├── requirements/               # All SRS, UML requirements, requirement models
-│   │   
-│   ├── management/                 # Planning, methodology, and procedures
-│   │  
-│   ├── design/                     # Design models and architecture docs
-│   │
-│   ├── implementation/             # Implementation-related guides  
-│   ├── test/                       # Test plans and reports
-│   ├── archive/                    # Deprecated or outdated versions
+/SE25
+├── README.md                 <-- ENTRY POINT / Quick Start Guide
 │
-├── doc/                            # General project documentation
-│   ├── README.md
-│   └── References.md
-│   ├── images/                         # Images used in the project
-│  
+├── ros2_robot_ws/            <-- ROS 2 SOURCE CODE (Primary Workspace)
+│   ├── src/
+│   │   ├── control_pkg/      <-- Interface/GUI Package
+│   │   └── simulation_pkg/   <-- Simulation/Physics Package
+│   └── (...)
 │
-├── ros2_robot_ws/                  # ROS 2 workspace for the system
-```
-
+├── models/                   <-- 3D MODELS AND ROBOT DESCRIPTION
+│   ├── robot/                <-- URDF/XACRO files for the robotic arm
+│   └── meshes/               <-- .STL/.DAE files for visualization
+│
+├── assets/                   <-- STATIC FILES AND RESOURCES
+│   ├── diagrams/             <-- Source files for diagrams (PlantUML, .drawio)
+│   └── images/               <-- Compiled captures and diagrams (PNG, JPG)
+│
+└── docs/                     <-- FORMAL AND TECHNICAL DOCUMENTATION
+    ├── guides/               <-- TECHNICAL GUIDES (Living Reference)
+    │   ├── 01_ROS2_Interface.md
+    │   ├── 02_RT_Strategy.md
+    │   ├── Code_Style_Guide.md
+    │   └── Troubleshooting.md
+    │
+    └── plans/                <-- FORMAL PLANS (Lifecycle Artifacts)
+        ├── CMP – Configuration Management Plan.md
+        ├── SRS – System Requirements Specification.md
+        ├── SDD – Software Design Document.md
+        ├── PTP – Project Test Plan.md
+        ├── UM – User Manual.md
+        └── Glossary.md
 ---
 
 ## 5. Naming Conventions
@@ -77,7 +87,7 @@ All documents must follow this naming format:
 - `SDD_SE25_v1.0_2025-11-01.pdf`
 - `TESTPLAN_SE25_v0.9_2025-11-05.docx`
 
-**Document Type Codes:**
+**Document Type Codes:** (TBC-Others can be added too)
 
 | Code | Meaning |
 |------|----------|
