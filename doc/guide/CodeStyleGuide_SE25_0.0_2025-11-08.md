@@ -135,30 +135,10 @@ The review and approval workflow is managed via **GitHub Pull Requests**:
 ## 8. Archiving and Disposal
 
 - Replaced versions are moved to `/deliverables/archive/` and renamed with `_archived_[YYYY-MM-DD]`.
-- **Retention policy:** Approved deliverables are retained for a minimum of five years after project completion.
 - Drafts or unapproved copies may be deleted after official acceptance.
   
----
 
-## 9. Templates and Automation
-
-All official templates are stored in `deliverables/templates/`:
-
-- `SRS_template.md`
-- `SDD_template.md`
-- `TestPlan_template.md`
-- `MeetingMinutes_template.md`
-- `ChangeLog_template.md`
-
-**Recommended GitHub Actions:**
-- Validate naming conventions automatically in pull requests.  
-- Run Markdown linting (`markdownlint`).  
-- Generate automatic changelogs from commit messages.
-
----
-
-
-## 10. References
+## 9. References
 
 - ISO/IEC 12207 — Software Life Cycle Processes  
 - IEEE 1012 — Verification and Validation  
@@ -168,7 +148,7 @@ All official templates are stored in `deliverables/templates/`:
 
 ---
 
-## 11. Appendix — Example Header and Change Log
+## 10. Appendix — Example Header and Change Log
 
 **Header Example:**
 **Change Log Example:**
