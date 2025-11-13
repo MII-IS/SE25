@@ -62,7 +62,7 @@ configuration.
 This is the simplest and most reliable way to test the robot’s movement without needing to
 publish commands from the terminal.
 
-<img width="2335" height="1240" alt="End-User Requirements Diagram" src="https://github.com/MII-IS/SE25/blob/main/images/end-user.png" />
+<img width="2335" height="1240" alt="End-User Requirements Diagram" src="https://github.com/MII-IS/SE25/blob/develop/images/RobotROS2Jazzy.jpeg" />
 <img width="2335" height="1240" alt="End-User Requirements Diagram" src="https://github.com/MII-IS/SE25/blob/main/images/end-user.png" />
 
 
