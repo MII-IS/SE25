@@ -1,1 +1,0 @@
-/mnt/c/Users/adeza/OneDrive/Escritorio/2MII/IngenieriaSoftware/SE25/ros2_robot_ws/build/ros2_control_demo_description/ament_cmake_core/ros2_control_demo_descriptionConfig-version.cmake
