@@ -2,16 +2,16 @@ The tool **Modelio** has been used to represent the requirements in each scenari
 
 ---
 
-## 🚀 Project Usage and Visualization (Modelio)
+## Project Usage and Visualization (Modelio)
 
 To explore the requirements traceability, modify diagrams, or generate new documentation, you must use the modeling tool with which the project was created: **Modelio**.
 
-### 🛠️ Prerequisites
+###  Prerequisites
 
 * **Modeling Tool:** **Modelio 5.4** is required. You can download the corresponding version from the official Modelio website.
 * **Git Manager:** It is recommended to use **GitHub Desktop** to clone the repository and manage updates.
 
-### 📂 Opening the Project
+###  Opening the Project
 
 The Modelio project is stored in a ZIP format within the repository for easy storage and download. Follow these steps to access and open the project:
 
@@ -24,7 +24,7 @@ The Modelio project is stored in a ZIP format within the repository for easy sto
     * Go to `File` and select `Open an existing project...`.
     * Navigate to the folder where you unzipped the Modelio project (inside `SE25/models/Requisitos/`) and select the main project file (usually with a `.project` extension).
 
-### ⬆️ Contribution and Model Updates
+### Contribution and Model Updates
 
 If you have made modifications or added new requirements in Modelio and wish to update the GitHub repository, you must follow the inverse process:
 
