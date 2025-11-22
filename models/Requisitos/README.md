@@ -13,15 +13,15 @@ To explore the requirements traceability, modify diagrams, or generate new docum
 
 ### Opening the Project (Using the ZIP File)
 
-The Modelio project is stored compressed in a **ZIP file** within the repository. Modelio can open this file directly.
+The Modelio project is stored compressed in a **ZIP file** within the repository. Modelio can import this file directly.
 
 1.  **Clone the Repository:** Use GitHub Desktop to clone this repository onto your local machine.
 2.  **Locate the File:** Once cloned, navigate to the following path in your file system:
     `SE25/models/Requisitos/`
-3.  **Open in Modelio:**
+3.  **Import in Modelio:**
     * Open the **Modelio 5.4** application.
-    * Go to `File` and select `Open an existing project...`.
-    * Navigate to the folder located at `SE25/models/Requisitos/` and **select the Modelio project ZIP file** (e.g., `ProjectName.zip`). Modelio will handle the decompression upon opening.
+    * Go to the `File` menu and select **`Import a project...`**.
+    * Navigate to the folder located at `SE25/models/Requisitos/` and **select the Modelio project ZIP file** (e.g., `ProjectName.zip`). Modelio will handle the decompression and import process.
 
 ### Contribution and Model Updates
 
