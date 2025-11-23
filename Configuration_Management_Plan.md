@@ -82,8 +82,20 @@ When in doubt, treat the change as **major** and involve the CM.
   - Communicate proactively about potential impacts.
 
 ---
+## 6.  Management of Models and Special CIs (Modelio)
 
-## 6. Change Process Summary
+The Modelio files are critical **Configuration Items (CI)** representing the project's requirements, architecture, and traceability.
+
+### 6.1 Specific Change Rules for Models
+
+Any modification to the Modelio model (adding/modifying requirements, diagrams, traceability, or generated documentation) is automatically considered a **Major Change** and must meet the following requirements:
+
+1.  **Required Approval:** **Configuration Manager (CM) approval** via a Pull Request (PR) is always required.
+2.  **Contribution Process:** Detailed instructions on how to open, modify, compress, and update the project's ZIP file on GitHub are found in the reference document.
+
+**Instruction Reference:** To learn **how** to open, modify, and upload the Modelio project, consult the document **models/Requisitos/README.md**.
+
+## 7. Change Process Summary
 
 1. Determine the **type of change** (see Section 2 and 3).  
 2. If a PR is required, assign reviewers according to the rules.  
