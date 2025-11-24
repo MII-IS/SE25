@@ -31,25 +31,36 @@ rosdep update
 
 ## Steps to run the project
 **1. Load the ROS 2 environment**
+```bash
 source /opt/ros/jazzy/setup.bash
-
+````
 **2. Create a workspace**
+```bash
 mkdir -p ~/ros2_robot_ws/src
 cd ~/ros2_robot_ws/src
+```
 
 **3. Clone the demos (Jazzy branch)**
+```bash
 git clone -b jazzy https://github.com/ros-controls/ros2_control_demos.git
+```
 
 **4. Install dependencies and build only what is needed**
+```bash
 cd ~/ros2_robot_ws
 rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install --packages-select ros2_control_demo_description ros2_control_demo_example_7
+```
 
 **5. Activate the workspace**
+```bash
 source install/setup.bash
+```
 
 ## Launch the Robot in RViz 2
+```bash
 ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
+```
 RViz 2 will open showing the robot with its six joints.
 
 ## Moving the Joints Manually
@@ -64,6 +75,4 @@ publish commands from the terminal.
 
 <img width="2335" height="1240" alt="Robot ROS2Jazzy" src="https://github.com/MII-IS/SE25/blob/develop/images/RobotROS2Jazzy.jpeg" />
 <img width="2335" height="1240" alt="Robot ROS2Jazzy 2" src="https://github.com/MII-IS/SE25/blob/develop/images/RobotROS2Jazzy2.jpeg" />
-
-
 
