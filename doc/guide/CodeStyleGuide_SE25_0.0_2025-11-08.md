@@ -41,37 +41,18 @@ This ensures consistency, easy navigation, and traceability throughout the softw
 
 
 ```
-/SE25
-├── README.md                 <-- ENTRY POINT / Quick Start Guide
-│
-├── ros2_robot_ws/            <-- ROS 2 SOURCE CODE (Primary Workspace)
-│   ├── src/
-│   │   ├── control_pkg/      <-- Interface/GUI Package
-│   │   └── simulation_pkg/   <-- Simulation/Physics Package
-│   └── (...)
-│
-├── models/                   <-- 3D MODELS AND ROBOT DESCRIPTION
-│   ├── robot/                <-- URDF/XACRO files for the robotic arm
-│   └── meshes/               <-- .STL/.DAE files for visualization
-│
-├── assets/                   <-- STATIC FILES AND RESOURCES
-│   ├── diagrams/             <-- Source files for diagrams (PlantUML, .drawio)
-│   └── images/               <-- Compiled captures and diagrams (PNG, JPG)
-│
-└── docs/                     <-- FORMAL AND TECHNICAL DOCUMENTATION
-    ├── guides/               <-- TECHNICAL GUIDES (Living Reference)
-    │   ├── 01_ROS2_Interface.md
-    │   ├── 02_RT_Strategy.md
-    │   ├── Code_Style_Guide.md
-    │   └── Troubleshooting.md
-    │
-    └── plans/                <-- FORMAL PLANS (Lifecycle Artifacts)
-        ├── CMP – Configuration Management Plan.md
-        ├── SRS – System Requirements Specification.md
-        ├── SDD – Software Design Document.md
-        ├── PTP – Project Test Plan.md
-        ├── UM – User Manual.md
-        └── Glossary.md
+## Repository Structure
+SE25/
+├── doc/
+│ ├── deliverable/
+│ └── guide/
+├── images/
+├── models/
+│ ├── Requisitos/
+│ └── Reverse_model/
+└── src/
+  └── ros2_control/
+The purpose of each directory is detailed below.
 ```
 ---
 
