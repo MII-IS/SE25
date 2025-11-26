@@ -1,7 +1,5 @@
 # SE25 — Software Engineering Project  
-README for the `develop` branch
-
-This repository contains the documentation, models, images, and source code for the SE25 project. The structure follows software engineering best practices to support maintainability, traceability, and collaborative work.
+README for the structure of the branch. This repository contains the documentation, models, images, and source code for the SE25 project. The structure follows software engineering best practices to support maintainability, traceability, and collaborative work.
 
 ---
 
@@ -15,7 +13,7 @@ SE25/
 │ ├── Requisitos/
 │ └── Reverse_model/
 └── src/
-└── ros2_control/
+  └── ros2_control/
 The purpose of each directory is detailed below.
 
 ---
@@ -65,20 +63,20 @@ This directory contains images used throughout the documentation, such as:
 
 This directory contains all system modeling artifacts, typically produced with UML or similar methodologies.
 
-### 3.1 `models/Requisitos`
+### 3.1 `models/requirements`
 Contains requirement-related models, including:
 - Use case diagrams  
 - Activity diagrams  
 - Conceptual models  
 - Other functional analysis models
 
-### 3.2 `models/Reverse_model`
+### 3.2 `models/reversemodel`
 Contains models generated through reverse engineering, such as:
 - Class diagrams derived from source code  
 - Dependency diagrams  
 - Automatically generated structural representations
 
-The `README.md` within the `models` directory describes how to organize, interpret, or regenerate these models.
+The `README.md` within the `models` directory provides a detailed description of the UML and SysML models, including their structure, purpose, and the modeling approach used in the project.
 
 ---
 
@@ -93,7 +91,8 @@ Contains the ROS 2 codebase related to controlling the robotic system, including
 - Parameter and launch files  
 - Code for controlling sensors and actuators
 
-A `README.md` is included with instructions for setup, dependencies, and execution.
+The `README.md` within the `src` directory provides a detailed explanation of how the source code is organized, its relationship with the UML/SysML models, and how generated, copied, and manually written code coexist within the implementation.
+
 
 ---
 
