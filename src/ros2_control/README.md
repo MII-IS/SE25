@@ -30,26 +30,25 @@ rosdep update
 ```
 
 ## Steps to run the project
-**1. Load the ROS 2 environment**
+**1. Clone the repository(develop branch)**
+```bash
+cd ~
+git clone -b develop https://github.com/MII-IS/SE25.git
+cd SE25
+````
+**2. Load ROS 2 environment**
 ```bash
 source /opt/ros/jazzy/setup.bash
-````
-**2. Create a workspace**
-```bash
-mkdir -p ~/ros2_robot_ws/src
-cd ~/ros2_robot_ws/src
 ```
 
-**3. Clone the demos (Jazzy branch)**
+**3. Install dependencies**
 ```bash
-git clone -b jazzy https://github.com/ros-controls/ros2_control_demos.git
-```
-
-**4. Install dependencies and build only what is needed**
-```bash
-cd ~/ros2_robot_ws
 rosdep install --from-paths src --ignore-src -r -y
-colcon build --symlink-install --packages-select ros2_control_demo_description ros2_control_demo_example_7
+```
+
+**4. Build the workspace**
+```bash
+colcon build --symlink-install
 ```
 
 **5. Activate the workspace**
@@ -70,7 +69,7 @@ If you have already cloned the repository, installed dependencies, and built the
 Just run these commands in a new terminal to launch the robot directly:
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd ~/ros2_robot_ws
+cd ~/SE25
 source install/setup.bash
 ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
 ```
