@@ -2,7 +2,7 @@
 README for the structure of the branch. This repository contains the documentation, models, images, and source code for the SE25 project. The structure follows software engineering best practices to support maintainability, traceability, and collaborative work.
 
 ---
-'''
+```
 ## Repository Structure
 SE25/
 ├── doc/
@@ -15,7 +15,7 @@ SE25/
 └── src/
   └── ros2_control/
 The purpose of each directory is detailed below.
-'''
+```
 ---
 
 ## 1. `doc` — Project Documentation
