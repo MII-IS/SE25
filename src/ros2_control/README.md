@@ -63,6 +63,19 @@ ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
 ```
 RViz 2 will open showing the robot with its six joints.
 
+## Quick Start (If You Already Installed Everything Before)
+
+If you have already cloned the repository, installed dependencies, and built the workspace at least once, you do not need to repeat all the steps.
+
+Just run these commands in a new terminal to launch the robot directly:
+```bash
+source /opt/ros/jazzy/setup.bash
+cd ~/ros2_robot_ws
+source install/setup.bash
+ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
+```
+This will open RViz 2 and the Joint State Publisher GUI so you can move each joint manually.
+
 ## Moving the Joints Manually
 Once the robot appears in RViz 2, you can control each joint manually from the “Joint State
 Publisher GUI” window.
