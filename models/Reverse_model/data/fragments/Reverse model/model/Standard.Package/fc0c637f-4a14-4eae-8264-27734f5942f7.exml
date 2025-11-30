@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="reverse model" version="4">
+  <OBJECT>
+    <ID name="reverse model" mc="Standard.Package" uid="fc0c637f-4a14-4eae-8264-27734f5942f7"/>
+    <PID name="Reverse model" mc="Standard.Project" uid="32c67613-e2fc-45a7-ac67-00b82774cf14"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[reverse model]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Visualización" mc="Standard.Class" uid="5a7c13cd-d9c6-4494-be17-aca7ca63224e"/>
+        <COMPID name="Posición actual" mc="Standard.Class" uid="0f9a51db-04fd-4a45-8132-1e00109f9c21"/>
+        <COMPID name="Ángulo de rótulas" mc="Standard.Class" uid="02ac79e4-af62-4a34-b498-cf1c886d8276"/>
+        <COMPID name="Ejes de rótulas" mc="Standard.Class" uid="4b943ef7-fc5c-4094-b50c-af7714543c5d"/>
+        <COMPID name="Class" mc="Standard.Class" uid="cc975a2f-35c7-452c-9ccc-f2085a36bc5a"/>
+        <COMPID name="Ver colisiones" mc="Standard.Class" uid="e9096560-75e2-4294-a74e-964ada25293e"/>
+        <COMPID name="Simulación" mc="Standard.Class" uid="a6656d24-7c36-4905-955a-d383b5791dfa"/>
+        <COMPID name="Robot 6 rótulas" mc="Standard.Class" uid="a5edd000-ee23-4c67-a72c-020292144a7f"/>
+        <COMPID name="Posición objetivo" mc="Standard.Class" uid="ec123fc0-863d-4ec0-b11a-ed0eecd729ac"/>
+        <COMPID name="Tiempo de simulación" mc="Standard.Class" uid="d310d075-c1e8-403d-bd39-8ffb68e48129"/>
+        <COMPID name="FPS" mc="Standard.Class" uid="318013a8-2930-41c4-bdf6-b74f08e34c0a"/>
+        <COMPID name="Añadir masa e inercia" mc="Standard.Class" uid="741bb358-519e-4b2e-a899-77f87124d4c2"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="reverse model Class diagram" mc="Standard.ClassDiagram" uid="668eefb2-2587-46bc-ad09-a266c6f4c026"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
