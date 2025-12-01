@@ -73,8 +73,8 @@
   <axis xyz="1 0 0" />
   <limit effort="1000.0" lower="-1.0" upper="1.0" velocity="0.5" />
   </joint>
-  
-  <link name="world"/>
+
+  <!--<link name="world"/> -->
 
   <joint name="joint_1" type="revolute">
     <parent link="base_link"/>
