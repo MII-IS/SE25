@@ -1,1 +1,0 @@
-/mnt/c/Users/adeza/OneDrive/Escritorio/2MII/IngenieriaSoftware/SE25/ros2_robot_ws/src/ros2_control_demo_example_7/hardware/include/ros2_control_demo_example_7/r6bot_hardware.hpp
