@@ -10,6 +10,7 @@ r6bot_controller:
   ros__parameters:
     type: ros2_control_demo_example_7/RobotController
     joints:
+      - base_slider_joint
       - joint_1
       - joint_2
       - joint_3
