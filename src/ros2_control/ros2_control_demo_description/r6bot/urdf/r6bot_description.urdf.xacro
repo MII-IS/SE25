@@ -64,7 +64,6 @@
 
   <link name="ft_frame"/>
   <link name="tool0"/>
-  <link name="world"/>
   
   <!-- joints - main serial chain -->
   <joint name="base_slider_joint" type="prismatic">
@@ -73,7 +72,9 @@
   <origin xyz="0 0 0" rpy="0 0 0" />
   <axis xyz="1 0 0" />
   <limit effort="1000.0" lower="-1.0" upper="1.0" velocity="0.5" />
-</joint>
+  </joint>
+  
+  <link name="world"/>
 
   <joint name="joint_1" type="revolute">
     <parent link="base_link"/>
