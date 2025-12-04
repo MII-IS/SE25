@@ -19,16 +19,14 @@ The initial version of the robot included:
 - A fixed joint connecting the robot base to the world frame
 - Only angular control through GUI sliders
 - No possibility of translating the robot in the environment
+<img width="2335" height="1240" alt="Robot ROS2Jazzy" src="https://github.com/MII-IS/SE25/blob/develop/images/RobotROS2Jazzy.jpeg" />
+<img width="2335" height="1240" alt="Robot ROS2Jazzy 2" src="https://github.com/MII-IS/SE25/blob/develop/images/RobotROS2Jazzy2.jpeg" />
 
 ### Limitations
 
 - The robot could not be repositioned in the workspace.
 - Any change in the robot’s global position required manually editing the URDF.
 - No support for testing scenarios requiring variable robot placement.
-
-<img width="2335" height="1240" alt="Robot ROS2Jazzy" src="https://github.com/MII-IS/SE25/blob/develop/images/RobotROS2Jazzy.jpeg" />
-<img width="2335" height="1240" alt="Robot ROS2Jazzy 2" src="https://github.com/MII-IS/SE25/blob/develop/images/RobotROS2Jazzy2.jpeg" />
-
 ---
 
 ## 3. Extended Robot Model (After Enhancement)
@@ -51,6 +49,8 @@ This change enables the robot base to translate along the X-axis, which adds a n
 - Users can now translate the robot horizontally within RViz.
 - The model becomes more suitable for testing scenarios involving positional variation.
 - The modification is fully backward compatible with the original arm structure.
+<img width="2335" height="1240" alt="Robot_extended" src="https://github.com/MII-IS/SE25/blob/develop/images/Robot_extended.png" />
+
 
 ### Motivation
 
@@ -66,8 +66,11 @@ This change enables the robot base to translate along the X-axis, which adds a n
 For clarity, the repository stores both robot models:
 
 SE25/
+
 ├── robot_initial/ # Original model (fixed base)
+
 ├── robot_extended/ # Updated model (prismatic base joint)
+
 └── src/ # Extended model used for compilation and execution
 
 ROS 2 compiles only what is inside `src/`, so the standard workspace runs the extended version.
@@ -83,17 +86,17 @@ Below are the full setup and launch instructions.
 
 ---
 
-# 6-DOF Robot Arm Simulation with ROS 2 Jazzy 
+### 6-DOF Robot Arm Simulation with ROS 2 Jazzy 
 This setup runs a 6-joint robotic arm using the official ROS 2 Control demos. 
 The robot is visualized in RViz 2, and each joint can be moved individually.
 Everything works on Ubuntu 24.04 LTS (also inside WSL 2 on Windows). 
 
---- 
-## Source 
+
+#### Source 
 The example comes from the official ROS 2 Control Demos repository on GitHub: 
 - **ros-controls/ros2_control_demos**: This repository provides examples to illustrate ros2_control and ros2_controllers. - **Example 7** is used here, which contains a simple 6-DOF robot model with position control.
 ---
-- ## Requirements
+- #### Requirements
 - Install these packages first:
 ```bash
 sudo apt update
@@ -104,7 +107,7 @@ sudo apt install -y \
 sudo rosdep init
 rosdep update
 ```
-## Steps to run the project 
+#### Steps to run the project 
 **1. Clone the repository(develop branch)**
 ```bash
 cd ~
@@ -128,13 +131,13 @@ colcon build --symlink-install
 ```bash
 source install/setup.bash
 ```
-## Launch the Robot in RViz 2
+### Launch the Robot in RViz 2
 ```bash
 ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
 ```
 RViz 2 will open showing the robot with its six joints. 
 
-## Quick Start (If You Already Installed Everything Before) 
+### Quick Start (If You Already Installed Everything Before) 
 If you have already cloned the repository, installed dependencies, and built the workspace at least once, you do not need to repeat all the steps. Just run these commands in a new terminal to launch the robot directly:
 ```bash
 source /opt/ros/jazzy/setup.bash
@@ -144,7 +147,7 @@ ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
 ```
 This will open RViz 2 and the Joint State Publisher GUI so you can move each joint manually, as well as adjust the position of the robot base.
 
-## Moving the Joints Manually
+### Moving the Joints Manually
 Once the robot appears in RViz 2, you can control each joint manually from the *Joint State Publisher GUI* window.  
 This tool lets you:
 
