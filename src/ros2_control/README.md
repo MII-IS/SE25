@@ -1,17 +1,21 @@
 # 6-DOF Robot Arm Simulation with ROS 2 Jazzy
 
-This setup runs a 6-joint robotic arm using the official ROS 2 Control demos.  
-The robot is visualized in RViz 2, and each joint can be moved individually.  
-Everything works on Ubuntu 24.04 LTS (also inside WSL 2 on Windows).
+This workspace contains the **extended version** of the 6-DOF robotic arm based on the official ROS 2 Control Demos (Example 7).  
+The robot is visualized in RViz 2, and its joints can be moved individually through the Joint State Publisher GUI.  
+In this enhanced model, the **robot base can also be translated along the X-axis** using an additional slider.
+
+Everything works on Ubuntu 24.04 LTS (including WSL 2).
 
 ---
 
 ## Source
 
-The example comes from the official ROS 2 Control Demos repository on GitHub:
+The robot implementation is based on:
 
-- **ros-controls/ros2_control_demos**: This repository provides examples to illustrate `ros2_control` and `ros2_controllers`.  
-- **Example 7** is used here, which contains a simple 6-DOF robot model with position control.
+- **ros-controls/ros2_control_demos** – Official demos for `ros2_control`  
+- **Example 7** – Simple 6-DOF robot model with position control  
+
+This workspace extends the original model by introducing a prismatic base joint.
 
 ---
 
@@ -85,6 +89,6 @@ configuration.
 This is the simplest and most reliable way to test the robot’s movement without needing to
 publish commands from the terminal.
 
-<img width="2335" height="1240" alt="Robot ROS2Jazzy" src="https://github.com/MII-IS/SE25/blob/develop/images/RobotROS2Jazzy.jpeg" />
-<img width="2335" height="1240" alt="Robot ROS2Jazzy 2" src="https://github.com/MII-IS/SE25/blob/develop/images/RobotROS2Jazzy2.jpeg" />
+<img width="2335" height="1240" alt="Robot_extended" src="https://github.com/MII-IS/SE25/blob/develop/images/Robot_extended.png" />
+
 
