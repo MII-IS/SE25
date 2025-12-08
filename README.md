@@ -91,39 +91,20 @@ This repository is structured as a ROS 2 workspace. All custom packages are loca
 
 
 ```
-
 SE25/
 
 ├── doc/
-
 │ ├── deliverable/
-
+│ │ └── archives/
 │ └── guide/
-
+│ 
 ├── images/
-
 ├── models/
-
 │ ├── Requisitos/
-
 │ └── Reverse_model/
-
-├── robot_extended/
-
-│ ├── ros2_control_demo_description/
-
-│ └── ros2_control_demo_example_7/
-
-├── robot_initial/
-
-│ ├── ros2_control_demo_description/
-
-│ └── ros2_control_demo_example_7/
-
 └── src/
-
-  └── ros2_control/
-
+  ├── ros2_control_demo_description/
+  └── ros2_control_demo_example_7/
 ```
 
 README for the structure of the branch. This repository contains the documentation, models, images, and source code for the SE25 project. The structure follows software engineering best practices to support maintainability, traceability, and collaborative work.
@@ -211,175 +192,57 @@ This directory contains images used throughout the documentation, such as:
 ---
 
 
-
 ### 3. `models` — System Models
-
-
 
 This directory contains all system modeling artifacts, typically produced with UML or similar methodologies.
 
-
-
-#### 3.1 `models/requirements`
+#### 3.1 `models/Requisitos`
 
 Contains requirement-related models, including:
 
 - Use case diagrams  
-
 - Activity diagrams  
-
 - Conceptual models  
+- Other functional analysis models  
 
-- Other functional analysis models
-
-
-
-#### 3.2 `models/reversemodel`
+#### 3.2 `models/Reverse_model`
 
 Contains models generated through reverse engineering, such as:
 
 - Class diagrams derived from source code  
-
 - Dependency diagrams  
+- Automatically generated structural representations  
 
-- Automatically generated structural representations
-
-
-
-The `README.md` within the `models` directory provides a detailed description of the UML and SysML models, including their structure, purpose, and the modeling approach used in the project.
-
-
+The `README.md` within the `models` directory provides a detailed description of UML and SysML models, including their structure, purpose, and modeling approach used in the project.
 
 ---
 
-### 4.`robot_initial`
-
-
-
-The **basic configuration** of the robot, designed as a starting point or for simple demonstrations.
-
-
-
-#### **Includes**
-
-- **Minimal URDF/XACRO** describing a 6-DOF robotic arm with a fixed base  
-
-- **Basic `ros2_control` configuration**  
-
-  - Fake hardware  
-
-  - Simple transmissions  
-
-- **Minimal controllers** (e.g., position controllers)  
-
-- **Simple demo examples**  
-
-  - Launch files  
-
-  - RViz visualization  
-
-  - GUI-based control  
-
-
-
-#### **Typical Use**
-
-- Introduction to `ros2_control` and robot architecture  
-
-- Lightweight testing or early-stage development  
-
-- Concept verification  
-
-- Easy-to-read and easy-to-modify demos  
-
-
-
----
-
-
-
-### 5. `robot_extended`
-
-
-
-The **advanced and more realistic** version of the robot.  
-
-Designed for serious development, extended testing, and richer simulation scenarios.
-
-
-
-#### **Includes**
-
-- **Complex URDF/XACRO**  
-
-  - Detailed geometry  
-
-  - Realistic inertias  
-
-  - Collision elements  
-
-  - Refined transmissions  
-
-- **More complete hardware configuration**  
-
-  - Multiple interfaces  
-
-  - Optional simulated or real sensors  
-
-- **Additional or more sophisticated controllers**, structured modularly  
-
-- **Better-organized demos**, including:  
-
-  - More controllable joints  
-
-  - A mobile base (`prismatic` joint)  
-
-  - Structured launch files  
-
-  - Integration with simulation/visualization environments  
-
-
-
-#### **Typical Use**
-
-- Advanced development and integration  
-
-- Realistic control testing  
-
-- Complex simulations  
-
-- Experiments requiring flexibility and higher fidelity
-
-
-
----
-
-
-
-### 6. `src` — Source Code
-
-
+### 4. `src` — Source Code
 
 This directory contains the executable implementation of the project.
 
+#### 4.1 `src/ros2_control_demo_description`
 
+Contains ROS 2 code related to the minimal description and configuration of the robot for demos.  
 
-#### 6.1 `src/ros2_control`
+Includes:
 
-Contains the ROS 2 codebase related to controlling the robotic system, including:
+- Basic URDF/XACRO  
+- Minimal `ros2_control` configuration  
+- Simple controllers (e.g., position controllers)  
+- Launch files for RViz and demo execution  
 
-- ROS 2 nodes  
+#### 4.2 `src/ros2_control_demo_example_7`
 
-- Hardware interface configurations  
+Contains example code for more advanced tests and simulations.  
 
-- Parameter and launch files  
+Includes:
 
-- Code for controlling sensors and actuators
+- More complex robot and controller configurations  
+- Structured launch and visualization examples  
+- Integration with simulated or real sensors  
 
-
-
-The `README.md` within the `src` directory provides a detailed explanation of how the source code is organized, its relationship with the UML/SysML models, and how generated, copied, and manually written code coexist within the implementation.
-
+The `README.md` inside `src` provides a detailed explanation of how the source code is organized, its relationship with UML/SysML models, and how generated, copied, and manually written code coexist.
 
 
 ## Development Environment Setup
