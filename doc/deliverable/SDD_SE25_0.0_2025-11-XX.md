@@ -92,9 +92,7 @@ These components communicate in real-time using ROS 2 middleware, enabling synch
 The system provides the following core functionalities:
 - Load and visualize a robotic arm model in a 3D simulation environment.
 - Allow manual control of individual joints via a graphical user interface.
-- Enable automated execution of predefined motion trajectories.
 - Display real-time feedback of the robot’s pose and state.
-- Detect collisions with virtual obstacles and trigger emergency stop procedures.
 - Maintain low-latency communication between control and simulation components.
 
 ### 2.3 Design Constraints
@@ -147,7 +145,6 @@ The system components interact through ROS 2 topics:
 
 - */joint_commands:* Control GUI → Simulation Engine
 - */robot_state:* Simulation Engine → Control GUI
-- */collision_event:* Simulation Engine → Control GUI (for emergency stop)
 
 Each component is implemented as a ROS 2 node, enabling modular deployment and testing. The publish/subscribe model ensures decoupling and scalability.
 
@@ -212,7 +209,6 @@ The system includes robust error-handling mechanisms:
 
 - **ROS 2 Node Failures:** Logged and reported via diagnostics.
 - **Invalid Commands:** Ignored or rejected with warning messages.
-- **Collision Events:** Trigger emergency stop and notify user.
 - **Communication Failures:** Retries or fallback procedures.
 
 All exceptions are logged with timestamps and severity levels. Critical errors halt the system safely.
