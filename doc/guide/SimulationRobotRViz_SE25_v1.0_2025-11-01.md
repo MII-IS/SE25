@@ -2,7 +2,14 @@
 
 ## 1. Introduction
 
-This document describes the evolution of the 6-DOF robotic arm model used in the project.  
+This document describes the evolution of the 6-DOF robotic arm model used in the project, including: 
+- Evolution of the robot model  
+- Differences between the initial and extended versions  
+- ros2_control description and demo packages  
+- Repository structure  
+- Full instructions to build and run the simulation in RViz  
+- Proposed enhancements for future development  
+
 Originally, the system implemented a standard position-controlled 6-joint manipulator from the **ROS 2 Control Demos (Example 7)**. The robot could be manipulated through the **Joint State Publisher GUI**, which provided sliders to adjust each of the six revolute joints.
 
 While this allowed full control of the arm configuration, the robot’s base was fixed to the environment, making it impossible to reposition the entire robot during simulation. This limitation motivated the introduction of an enhancement: enabling horizontal translation of the robot base through an additional GUI slider.
