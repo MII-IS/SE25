@@ -71,18 +71,19 @@ This change enables the robot base to translate along the X-axis, which adds a n
 ## 4. Repository Organization
 
 For clarity, the repository stores both robot models:
+```
+├── doc/
+│ ├── deliverable/
+│ │ └── archives/
+│       ├── obot_extended_archived_2025-12-08/
+│       └── robot_initial_archived_2025-12-08/
+│
+└── src/
+  ├── ros2_control_demo_description/
+  └── ros2_control_demo_example_7/
+```
 
-SE25/
-
-├── robot_initial/ # Original model (fixed base)
-
-├── robot_extended/ # Updated model (prismatic base joint)
-
-└── src/ # Extended model used for compilation and execution
-
-ROS 2 compiles only what is inside `src/`, so the standard workspace runs the extended version.
-
-The initial model is preserved separately for documentation, comparison, and traceability.
+The versions located in archives are **obsoleted** versions of the Robot (Initial Robot Model). For the active development version, please refer to the root src/ directory ( Extended Robot Model ).
 
 ---
 
