@@ -50,9 +50,14 @@ SE25/
 ├── models/
 │ ├── Requisitos/
 │ └── Reverse_model/
+├── robot_extended/
+│ ├── ros2_control_demo_description/
+│ └── ros2_control_demo_example_7/
+├── robot_initial/
+│ ├── ros2_control_demo_description/
+│ └── ros2_control_demo_example_7/
 └── src/
   └── ros2_control/
-The purpose of each directory is detailed below.
 ```
 ---
 
