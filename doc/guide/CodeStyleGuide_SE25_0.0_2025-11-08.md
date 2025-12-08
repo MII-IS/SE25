@@ -43,23 +43,19 @@ This ensures consistency, easy navigation, and traceability throughout the softw
 ```
 ## Repository Structure
 SE25/
+
 ├── doc/
 │ ├── deliverable/
+│ │ └── archives/
 │ └── guide/
-│ └── archive/
+│ 
 ├── images/
 ├── models/
 │ ├── Requisitos/
 │ └── Reverse_model/
-├── robot_extended/
-│ ├── ros2_control_demo_description/
-│ └── ros2_control_demo_example_7/
-├── robot_initial/
-│ ├── ros2_control_demo_description/
-│ └── ros2_control_demo_example_7/
 └── src/
-  └── ros2_control/
-```
+  ├── ros2_control_demo_description/
+  └── ros2_control_demo_example_7/
 ---
 
 ## 5. Naming Conventions
