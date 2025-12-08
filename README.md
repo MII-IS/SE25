@@ -261,7 +261,82 @@ After successfully building the project, you can launch the full system using th
     ```bash
     ros2 launch control_pkg full_system_launch.py
     ```
+This launch file will:
 
+* Load the robot model (`robot_initial` or `robot_extended`)
+* Start the controllers
+* Open RViz for visualization
+* Start the GUI for manual control
+* Launch all necessary ROS 2 nodes
+
+---
+
+### 4. Graphical User Interface (GUI)
+
+The GUI allows direct interaction with the robot:
+
+* **Joint sliders**: Control each degree of freedom of the 6-DOF robotic arm
+* **Base slider** (robot_extended only): Translate the robot horizontally
+* **Status panel**: Shows warnings, errors, and collision events
+* **Path manager**: Load, define, and execute automated paths
+
+All changes in the GUI are reflected in real time in RViz.
+
+---
+
+### 5. Manual Control
+
+Manual control is the simplest mode of operation:
+
+1. Ensure the robot is **enabled** in the GUI.
+2. Move the sliders to set joint positions.
+3. The robot updates in real time in the simulation.
+4. Press **Reset** to return to the home position.
+
+---
+
+### 6. Automated Path Execution
+
+The system can execute predefined trajectories automatically:
+
+1. Open the **Path Manager** in the GUI.
+2. Add one or more **poses** for the robot to reach.
+3. Configure timing, interpolation type, and velocity limits.
+4. Press **Execute Path** to run the trajectory.
+
+The system will halt automatically in case of a collision or if **Emergency Stop** is pressed.
+
+---
+
+### 7. Useful ROS 2 Commands
+
+Some commands can be used in the terminal for development and testing:
+
+* Check joint states:
+
+ros2 topic echo /joint_states
+
+* Send a quick test command:
+
+ros2 topic pub /joint_commands sensor_msgs/msg/JointState "{position: [0,0,0,0,0,0]}"
+
+* List active controllers:
+
+ros2 control list_controllers
+
+* Switch controllers:
+
+ros2 control switch_controller --start <controller_name>
+
+---
+
+### 8. Summary
+
+1. Install prerequisites.
+2. Clone and build the workspace.
+3. Launch the system with the provided ROS 2 launch file.
+4. Use the GUI to control the robot manually or execute automated trajectories.
+5. Use ROS 2 commands to monitor and interact with the system if required.
 ## Project Management
 
 This project is managed using **GitHub Issues** and **GitHub Projects**. This keeps our tasks, discussions, and code all in one place.
