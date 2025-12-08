@@ -1,45 +1,98 @@
-# SE25 Source Code
+# 6-DOF Robot Arm Simulation with ROS 2 Jazzy
 
-This directory contains the source code for the robotics project, which is copied from somewhere, generated and/or manually written based on the UML models located in the `../models` directory. The code in this folder is the implementation of the design specified in our Model-Based Systems and Software Engineering (MBSSE) approach.
+This workspace contains the **extended version** of the 6-DOF robotic arm based on the official ROS 2 Control Demos (Example 7).  
+The robot is visualized in RViz 2, and its joints can be moved individually through the Joint State Publisher GUI.  
+In this enhanced model, the **robot base can also be translated along the X-axis** using an additional slider.
 
-## Copied Code
+Everything works on Ubuntu 24.04 LTS (including WSL 2).
 
-Most code comes from the ROS2 demo ...
+---
 
-## Code Generation
+## Source
 
-A significant portion of the code in this directory may be automatically generated from the UML models. This includes:
+The robot implementation is based on:
 
-*   Class and data structures from the Block Definition Diagrams.
-*   State machine implementations from the State Machine Diagrams.
-*   Communication interfaces from the Internal Block Diagrams.
+- **ros-controls/ros2_control_demos** – Official demos for `ros2_control`  
+- **Example 7** – Simple 6-DOF robot model with position control  
 
-The code generation process is managed by [Name of Code Generation Tool/Framework] and can be triggered by running the scripts in the `scripts/` directory.
+This workspace extends the original model by introducing a prismatic base joint.
 
-## Manually Written Code
+---
 
-While we strive for maximum code generation, some parts of the codebase require manual implementation. This typically includes:
+## Requirements
 
-*   Complex algorithmic logic within methods.
-*   Hardware-specific driver implementations.
-*   Integration with third-party libraries.
+Install these packages first:
 
-Manually written code is clearly marked and is designed to integrate seamlessly with the generated code.
+```bash
+sudo apt update
+sudo apt install -y \
+  build-essential git python3-colcon-common-extensions python3-rosdep \
+  ros-jazzy-desktop ros-jazzy-rviz2
 
-## Directory Structure
+sudo rosdep init
+rosdep update
+```
 
-The source code is organized by functionality, which mirrors the structure of the UML models:
+## Steps to run the project (Using Standard Workspace)
+**1. Clone the repository(develop branch)**
+```bash
+**1. Clone the repository into your workspace**
+Assuming your workspace is `~/ros2_ws`, clone the repository into the `src` directory:
+```bash
+cd ~/ros2_ws/src
+git clone -b develop https://github.com/MII-IS/SE25.git
+cd SE25
+````
+**2. Load ROS 2 environment**
+```bash
+source /opt/ros/jazzy/setup.bash
+```
 
-*   **`<component_name>/`**: Each directory corresponds to a major component or block defined in the system's structural model.
-    *   **`include/`**: Header files (`.h`, `.hpp`).
-    *   **`src/`**: Source files (`.cpp`, `.py`).
-*   **`main/`**: The main entry point of the application.
-*   **`generated/`**: Contains the auto-generated code from the models. It is recommended not to modify files in this directory directly.
+**3. Install dependencies**
+*(Run this command from the workspace root, e.g., `~/ros2_ws`)*
+```bash
+rosdep install --from-paths src --ignore-src -r -y
+```
 
-## Building the Code
+**4. Build the workspace**
+*(Run this command from the workspace root, e.g., `~/ros2_ws`)*
+```bash
+colcon build --symlink-install
+```
 
-To build the code, please follow the instructions in the main `README.md` file located at the root of the project. Ensure you have all the required dependencies and build tools installed.
+**5. Activate the workspace**
+```bash
+source install/setup.bash
+```
 
-## Relationship to Models
+## Launch the Robot in RViz 2
+```bash
+ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
+```
+RViz 2 will open showing the robot with its six joints.
 
-The traceability between the code and the models is crucial. Each component and major class in the source code should correspond to an element in the UML models. For any questions regarding the implementation of a specific model element, please refer to the relevant diagram in the `../models` directory.
+## Quick Start (If You Already Installed Everything Before)
+
+If you have already cloned the repository, installed dependencies, and built the workspace at least once, you do not need to repeat all the steps.
+
+Just run these commands in a new terminal to launch the robot directly:
+```bash
+source /opt/ros/jazzy/setup.bash
+source ~/ros2_ws/install/setup.bash
+ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
+```
+This will open RViz 2 and the Joint State Publisher GUI so you can move each joint manually.
+
+## Moving the Joints Manually
+Once the robot appears in RViz 2, you can control each joint manually from the “Joint State
+Publisher GUI” window.
+This tool lets you change the position of each of the six joints using sliders or by entering
+numeric values.
+As you move each slider, the robot model updates immediately in RViz to show the new joint
+configuration.
+This is the simplest and most reliable way to test the robot’s movement without needing to
+publish commands from the terminal.
+
+<img width="2335" height="1240" alt="Robot_extended" src="https://github.com/MII-IS/SE25/blob/develop/images/Robot_extended.png" />
+
+
