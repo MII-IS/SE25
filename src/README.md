@@ -33,10 +33,13 @@ sudo rosdep init
 rosdep update
 ```
 
-## Steps to run the project
+## Steps to run the project (Using Standard Workspace)
 **1. Clone the repository(develop branch)**
 ```bash
-cd ~
+**1. Clone the repository into your workspace**
+Assuming your workspace is `~/ros2_ws`, clone the repository into the `src` directory:
+```bash
+cd ~/ros2_ws/src
 git clone -b develop https://github.com/MII-IS/SE25.git
 cd SE25
 ````
@@ -46,11 +49,13 @@ source /opt/ros/jazzy/setup.bash
 ```
 
 **3. Install dependencies**
+*(Run this command from the workspace root, e.g., `~/ros2_ws`)*
 ```bash
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
 **4. Build the workspace**
+*(Run this command from the workspace root, e.g., `~/ros2_ws`)*
 ```bash
 colcon build --symlink-install
 ```
@@ -73,8 +78,7 @@ If you have already cloned the repository, installed dependencies, and built the
 Just run these commands in a new terminal to launch the robot directly:
 ```bash
 source /opt/ros/jazzy/setup.bash
-cd ~/SE25
-source install/setup.bash
+source ~/ros2_ws/install/setup.bash
 ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
 ```
 This will open RViz 2 and the Joint State Publisher GUI so you can move each joint manually.
