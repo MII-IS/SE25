@@ -45,19 +45,22 @@ The system is designed to fulfill the following core operational scenarios:
 This repository is structured as a ROS 2 workspace. All custom packages are located within the `src` directory.
 
 ```
-/se25
-├── src/
-│   ├── simulation_pkg/      # ROS 2 package for the simulation environment
-│   └── control_pkg/         # ROS 2 package for the control interface and GUI
-├── models/
-├── images/
-│   └── diagrams/              # Contains diagrams for documentation
-├── deliverables/
-│   ├── SRS.md               # System Requirements Specification
-│   ├── SDD.md               # Architectural Design Document
-│   └── README.md
+SE25/
 ├── doc/
-└── README.md                # This file
+│ ├── deliverable/
+│ └── guide/
+├── images/
+├── models/
+│ ├── Requisitos/
+│ └── Reverse_model/
+├── robot_extended/
+│ ├── ros2_control_demo_description/
+│ └── ros2_control_demo_example_7/
+├── robot_initial/
+│ ├── ros2_control_demo_description/
+│ └── ros2_control_demo_example_7/
+└── src/
+  └── ros2_control/
 ```
 README for the structure of the branch. This repository contains the documentation, models, images, and source code for the SE25 project. The structure follows software engineering best practices to support maintainability, traceability, and collaborative work.
 
@@ -122,12 +125,63 @@ Contains models generated through reverse engineering, such as:
 The `README.md` within the `models` directory provides a detailed description of the UML and SysML models, including their structure, purpose, and the modeling approach used in the project.
 
 ---
+### 4.`robot_initial`
 
-### 4. `src` — Source Code
+The **basic configuration** of the robot, designed as a starting point or for simple demonstrations.
+
+#### **Includes**
+- **Minimal URDF/XACRO** describing a 6-DOF robotic arm with a fixed base  
+- **Basic `ros2_control` configuration**  
+  - Fake hardware  
+  - Simple transmissions  
+- **Minimal controllers** (e.g., position controllers)  
+- **Simple demo examples**  
+  - Launch files  
+  - RViz visualization  
+  - GUI-based control  
+
+#### **Typical Use**
+- Introduction to `ros2_control` and robot architecture  
+- Lightweight testing or early-stage development  
+- Concept verification  
+- Easy-to-read and easy-to-modify demos  
+
+---
+
+### 5. `robot_extended`
+
+The **advanced and more realistic** version of the robot.  
+Designed for serious development, extended testing, and richer simulation scenarios.
+
+#### **Includes**
+- **Complex URDF/XACRO**  
+  - Detailed geometry  
+  - Realistic inertias  
+  - Collision elements  
+  - Refined transmissions  
+- **More complete hardware configuration**  
+  - Multiple interfaces  
+  - Optional simulated or real sensors  
+- **Additional or more sophisticated controllers**, structured modularly  
+- **Better-organized demos**, including:  
+  - More controllable joints  
+  - A mobile base (`prismatic` joint)  
+  - Structured launch files  
+  - Integration with simulation/visualization environments  
+
+#### **Typical Use**
+- Advanced development and integration  
+- Realistic control testing  
+- Complex simulations  
+- Experiments requiring flexibility and higher fidelity
+
+---
+
+### 6. `src` — Source Code
 
 This directory contains the executable implementation of the project.
 
-#### 4.1 `src/ros2_control`
+#### 6.1 `src/ros2_control`
 Contains the ROS 2 codebase related to controlling the robotic system, including:
 - ROS 2 nodes  
 - Hardware interface configurations  
@@ -135,9 +189,6 @@ Contains the ROS 2 codebase related to controlling the robotic system, including
 - Code for controlling sensors and actuators
 
 The `README.md` within the `src` directory provides a detailed explanation of how the source code is organized, its relationship with the UML/SysML models, and how generated, copied, and manually written code coexist within the implementation.
-
-
----
 
 ## Development Environment Setup
 
@@ -152,6 +203,7 @@ sudo apt update
 sudo apt install git build-essential cmake
 ```
 
+---
 ### 2. Install ROS 2 Jazzy Jalisco
 
 Follow the official ROS 2 documentation to install the **ROS 2 Jazzy Jalisco** `ros-desktop` version.
