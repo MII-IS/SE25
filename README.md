@@ -299,9 +299,8 @@ sudo apt install ros-jazzy-desktop
 
 After installation, remember to source the setup file in your shell:
 
-
-
-```bash
+```
+bash
 
 echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 
@@ -329,15 +328,13 @@ source ~/.bashrc
 
 2.  **Clone the Repository:**
 
-    Clone this repository into your workspace's `src` directory.
-
-    ```bash
-
-    git clone https://github.com/your-username/se25-robot-control.git src/se25_robot_control
-
-    ```
-
-
+   Assuming your workspace is `~/ros2_ws`, clone the repository into the `src` directory:
+```
+bash
+cd ~/ros2_ws/src
+git clone -b develop https://github.com/MII-IS/SE25.git
+cd SE25
+```
 
 3.  **Install Dependencies and Build:**
 
