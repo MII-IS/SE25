@@ -4,7 +4,7 @@ This directory contains the UML (Unified Modeling Language) and SysML (Systems M
 
 The tool **Modelio** has been used to represent the requirements in each scenario.
 
----
+---.
 
 ## Model Overview
 
