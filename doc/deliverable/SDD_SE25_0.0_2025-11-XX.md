@@ -86,7 +86,7 @@ These components communicate in real-time using ROS 2 middleware, enabling synch
 
 > **Note:** The System of Interest (SoI) is the software-only simulation and control system, not the physical robot.
 
-> **Suggested Diagram:** Context diagram or system block diagram.
+
 
 ### 2.2 Main Functionalities
 The system provides the following core functionalities:
@@ -148,7 +148,7 @@ The system components interact through ROS 2 topics:
 
 Each component is implemented as a ROS 2 node, enabling modular deployment and testing. The publish/subscribe model ensures decoupling and scalability.
 
-> **Suggested Diagram:** Sequence diagram showing message flow during a control cycle.  
+
 > **Interaction Sequence Diagram:** 
 >  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/Interaction_Sequence_diagram.png" />  
 
@@ -180,7 +180,7 @@ Data Structures:
 **Trajectory:** List of target poses with timing information.  
 
 
-> **Suggested Diagram:** UML class diagram showing relationships between core classes..
+
 
 ### 4.2 Key Algorithms
 Describe important algorithms (e.g., control logic, path planning, collision detection).
@@ -199,11 +199,9 @@ The UI is built using a GUI framework compatible with ROS 2 (e.g., Qt or rqt). I
 - **Joint Control Panel:** Sliders for each joint.
 - **Trajectory Editor:** Allows users to define and preview motion paths.
 - **State Display:** Real-time visualization of robot pose and joint values.
-- **Emergency Stop Button:** Immediately halts robot motion.
 
 
-> **Suggested Elements:** Wireframes or screenshots of the GUI layout.  
-> **Suggested Elements:** Wireframes, flowcharts, screen mockups.
+>  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/Robot_extended.png" />  
 
 ### 4.4 Error and Exception Handling
 The system includes robust error-handling mechanisms:
@@ -298,7 +296,7 @@ This section includes supplementary diagrams that support the architectural and 
 - **Activity Diagrams**: Illustrating workflows like trajectory execution, collision response, and emergency stop.
 - **Component Diagrams**: Depicting the high-level architecture and ROS 2 node relationships.
 
-> Diagrams should be versioned and stored in the GitHub repository under `/docs/diagrams`.
+
 
 ---
 
