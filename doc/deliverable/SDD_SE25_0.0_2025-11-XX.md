@@ -126,8 +126,7 @@ The SE25 system follows a distributed architecture composed of two main subsyste
 
 These subsystems communicate via ROS 2 middleware using a publish/subscribe model. The architecture supports real-time data exchange and modular development, enabling parallel work by simulation and control teams.
 
-> **Interaction Sequence Diagram:** 
->  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/Interaction_Sequence_diagram.png" />  
+
 
 ### 3.2 Main Components
 
@@ -149,7 +148,8 @@ The system components interact through ROS 2 topics:
 Each component is implemented as a ROS 2 node, enabling modular deployment and testing. The publish/subscribe model ensures decoupling and scalability.
 
 > **Suggested Diagram:** Sequence diagram showing message flow during a control cycle.  
-> **Suggested Diagram:** Sequence or communication diagram.
+> **Interaction Sequence Diagram:** 
+>  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/Interaction_Sequence_diagram.png" />  
 
 ### 3.4 Design Rationale
 The architecture was chosen to support:
