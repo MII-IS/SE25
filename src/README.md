@@ -1,14 +1,14 @@
-### 6-DOF Robot Arm Simulation with ROS 2 Jazzy 
+## 6-DOF Robot Arm Simulation with ROS 2 Jazzy 
 This setup runs a 6-joint robotic arm using the official ROS 2 Control demos. 
 The robot is visualized in RViz 2, and each joint can be moved individually.
 Everything works on Ubuntu 24.04 LTS (also inside WSL 2 on Windows). 
 
 
-#### Source 
+### Source 
 The example comes from the official ROS 2 Control Demos repository on GitHub: 
 - **ros-controls/ros2_control_demos**: This repository provides examples to illustrate ros2_control and ros2_controllers. - **Example 7** is used here, which contains a simple 6-DOF robot model with position control.
 ---
-- #### Requirements
+- ### Requirements
 - Install these packages first:
 ```bash
 sudo apt update
@@ -19,7 +19,7 @@ sudo apt install -y \
 sudo rosdep init
 rosdep update
 ```
-#### Steps to run the project 
+### Steps to run the project 
 **1. Clone the repository(develop branch)**
 ```bash
 cd ~
