@@ -49,10 +49,6 @@ The Modelio projects are stored compressed in **ZIP files** within their respect
 
 ---
 
-## Contribution and Workflow
-
-For general guidelines on how to contribute to the project, please refer to the main `CONTRIBUTING.md` file in the root of the project.
-
 ### Updating the Models (ZIP Workflow)
 
 If you have made modifications or added new requirements in Modelio and wish to update the GitHub repository, you must follow this specific process:
