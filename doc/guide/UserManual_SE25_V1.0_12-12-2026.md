@@ -1,42 +1,36 @@
+# **User Manual – Robot Simulation Control Software**
 
-To ensure users can effectively install, understand, and operate software for controlling a simulated robot, a minimal user manual must cover the complete workflow from setup to execution.
+## **1. Introduction & System Requirements**
 
-The following structure outlines the minimal essential content required, organized by logical sections.
+### **Purpose**
+SE25 is a modular software system designed for **robot simulation, visualization, and control**. It enables users to:
+- Simulate 6-DOF robotic manipulators, mobile robots, and custom mechanisms
+- Perform path planning, inverse kinematics, and collision checking
+- Build virtual environments with obstacles, fixtures, and workpieces
+- Execute motion scripts and test robot behavior safely before deployment
+- Iintegrate with ROS2, RViz, and Gazebo
+- Import robot models in URDF, SDF, or custom formats.
 
-1. Introduction & System Requirements
+### **Prerequisites**
 
-Purpose: Briefly explain what the software does (e.g., "simulates 6-DOF robotic arms for path planning").
-Prerequisites:
-OS Compatibility: (Windows, Linux, macOS).
-Hardware Requirements: Minimum RAM, GPU requirements (crucial for 3D rendering), and disk space.
-Dependencies: Any external drivers, libraries (e.g., Python, ROS), or frameworks that must be pre-installed.
-2. Installation & Setup
+#### **Operating System Compatibility** (TBC)
+- **Linux (Ubuntu 22.04 recommended)**: full and easiest support 
+- **Windows 10/11**
+- **macOS** — limited support (no full ROS2 toolchain)
 
-Installation Steps: A step-by-step guide to installing the software (from the README?).
-First Launch: How to open the application and what to expect (e.g., a splash screen or default empty scene).
-3. User Interface (UI) Overview
+#### **Hardware Requirements** (TBC)
+- **CPU:** Dual-core or better  
+- **RAM:** *8 GB minimum* (16 GB recommended)  
+- **GPU:** OpenGL 3.3+ compatible GPU (dedicated GPU recommended)  
+- **Storage:** ~**1 GB** free disk space  
 
-Layout Diagram: A labeled screenshot of the main workspace.
-3D Viewport: Where the robot is visualized.
-Control Panel: Where parameters are adjusted.
-Toolbar: Buttons for common tools (Select, Move, Rotate).
-New control: Make emphasis on the new additions.
-4. Setting Up the Simulation Scene
+#### **Software Dependencies**
+- Python 3.8+
+- ROS2 Humble / Iron
+- RViz2
+- Gazebo / Ignition
+- OpenGL-compatible graphics drivers
+- Python packages listed **TBU**
 
-Loading a Robot: How to select a robot model from the library or import a custom model (if possible).
-Environment Setup: How to add obstacles, floors, or workpieces to the simulation environment.
-Resetting: How to reset the scene or robot to its default "Home" position.
-5. Controlling the Robot
-
-Manual Control: Instructions on moving the robot manually.
-Program Control:
-How to load or write a basic movement script (if possible).
-How to run, pause, and stop the execution.
-6. Troubleshooting & FAQ
-
-Common Errors: Solutions for frequent issues (e.g., "Simulation runs slowly," "Model fails to load," "Robot is stuck in singularity").
-Support: Contact information or links to a community forum/repository for bug reporting.
-7. Appendix (Optional but Recommended)
-
-Keyboard Shortcuts: A quick reference list for hotkeys (e.g., Space to Play/Pause, Ctrl+Z to Undo).
-Glossary: Definitions of specific terms used.
+## **2. Installation and setup**  
+### **Installation Steps**
