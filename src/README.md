@@ -6,10 +6,10 @@ Everything works on Ubuntu 24.04 LTS (also inside WSL 2 on Windows).
 
 ### Source 
 The example comes from the official ROS 2 Control Demos repository on GitHub: 
-- **ros-controls/ros2_control_demos**: This repository provides examples to illustrate ros2_control and ros2_controllers. - **Example 7** is used here, which contains a simple 6-DOF robot model with position control.
+- **ros-controls/ros2_control_demos**: This repository provides examples to illustrate ros2_control and ros2_controllers.  **Example 7** is used here, which contains a simple 6-DOF robot model with position control.
 ---
-- ### Requirements
-- Install these packages first:
+### Requirements
+Install these packages first:
 ```bash
 sudo apt update
 sudo apt install -y \
