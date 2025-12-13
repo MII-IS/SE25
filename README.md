@@ -1,8 +1,7 @@
-**Software engineering project for the**Software engineering project for the 25-26 course**
+# **Software engineering project for the Software engineering project for the 25-26 course**
 
 
-
-This is a README file for the SE25 project's GitHub repository. This README is designed to be the central entry point for any team member, providing all the necessary information to get started, understand the project's goals, and contribute effectively.
+This is a README file for the SE25 project's GitHub repository. It is designed to be the central entry point for any team member, providing all the necessary information to get started, understand the project's goals, and contribute effectively.
 
 
 
@@ -247,11 +246,7 @@ The `README.md` inside `src` provides a detailed explanation of how the source c
 
 ## Development Environment Setup
 
-
-
 To ensure a consistent development environment for all team members, please follow these setup instructions carefully on **Ubuntu 24.04 LTS**.
-
-
 
 ### 1. Install Core Dependencies
 
