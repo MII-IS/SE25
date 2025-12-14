@@ -256,6 +256,61 @@ For example, developers can avoid launching RViz by:
 
 As long as the ROS 2 nodes responsible for control and state publishing are running, the system remains fully operational without graphical output.
 
+---
+
+## 5. Testing & Validation
+
+This section outlines the testing strategy and procedures to verify the system requirements. The project employs a dual approach: **Validation Testing** (verifying the system meets requirements) and **Defect Testing** (stressing the system with edge cases).
+
+### 5.1 Testing Strategy
+
+We utilize **Equivalence Partitioning** to define test cases that cover the "space of possibilities" for robot trajectories (REQ-F-006). Inputs are categorized into three partitions to ensure robust coverage:
+
+1.  **Valid Sequences (Validation):** Standard multi-point trajectories to confirm the "Happy Path" and functional compliance.
+2.  **Boundary Sequences (Robustness):** Edge cases, such as single-point trajectories, to verify logical limits.
+3.  **Invalid Sequences (Defect Testing):** Abnormal inputs (e.g., empty sequences or unreachable targets) to verify error handling and system stability without crashing.
+
+### 5.2 Running Automated Verification
+
+A dedicated Python script (`automated_test.py`) has been developed to perform automated functional verification of the robot's trajectory logic without requiring physical hardware.
+
+**Prerequisites:**
+The simulation environment must be running before executing the tests.
+
+**Execution Steps:**
+
+1.  **Launch the Simulation:**
+    Open a terminal and launch the robot in RViz:
+    ```bash
+    ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
+    ```
+    *(Note: Ensure the "Joint State Publisher GUI" window is closed or untouched to avoid interference).*
+
+2.  **Run the Test Script:**
+    In a separate terminal, navigate to the source directory and execute the test node:
+    ```bash
+    python3 src/ros2_control_demo_example_7/test/automated_test.py
+    ```
+
+**Expected Output:**
+The script will sequentially execute three specific test cases (`TC-TRAJ-01`, `TC-TRAJ-02`, `TC-TRAJ-04`). The terminal will display pass/fail logs, and the robot in RViz will perform the corresponding movements:
+* **Validation:** Execution of a smooth, multi-point path.
+* **Boundary:** Execution of a single-point movement.
+* **Defect:** Rejection of an empty sequence (logs will show error detection) and the robot will return to Home.
+
+### 5.3 Standard Unit Testing
+
+For internal logic and package integrity, standard ROS 2 unit tests are maintained. These can be executed using the build tool:
+
+```bash
+# Run all tests in the workspace
+colcon test --event-handlers console_direct+
+
+# Check detailed results
+colcon test-result --all
+```
+
+
 ## 6. Contribution Guidelines
 
 This section defines the contribution workflow and quality requirements for developers contributing to the SE25 project. All contributions must follow these guidelines to ensure code consistency, maintainability, and system stability.
