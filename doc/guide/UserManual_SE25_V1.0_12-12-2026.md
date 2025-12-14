@@ -34,3 +34,10 @@ SE25 is a modular software system designed for **robot simulation, visualization
 
 ## **2. Installation and setup**  
 ### **Installation Steps**
+Installation and build instructions are maintained in the main repository README to avoid duplication.
+Please follow:
+README.md (repository root)
+Official ROS 2 Jazzy documentation
+Ensure that:
+ROS 2 is correctly sourced
+The workspace builds successfully using colcon
