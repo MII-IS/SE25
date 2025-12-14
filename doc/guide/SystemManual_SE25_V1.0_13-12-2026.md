@@ -283,7 +283,7 @@ The manual verification process utilizes a specific "Dancer Node" (move_robot_no
       cd SE25
       source /opt/ros/jazzy/setup.bash
       source install/setup.bash
-      run ros2_control_demo_example_7 move_robot_node
+      ros2 run ros2_control_demo_example_7 move_robot_node
   
     **Expected Result:** In RViz, the robot should execute a continuous, smooth "dance" movement involving all 7 axes (base + 6 arm joints). There should be no "flickering" of links, indicating that the TF tree is stable.
 
