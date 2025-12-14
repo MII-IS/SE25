@@ -424,7 +424,7 @@ The mock hardware assumes "perfect execution." It does not simulate gravity, fri
 #### No Collision Detection:
 The current mock backend acts purely as a kinematic state echo. It does not perform collision checking.
 - **Quirk:** The robot arm can pass through the floor, the base, or itself without stopping or generating an error. Collision avoidance must be handled at the planning layer (e.g., MoveIt), which is not active in the base configuration.
-#### Lack of Inverse KInematics (IK): 
+#### Lack of Inverse Kinematics (IK): 
 As discovered during the implementation of REQ-F-006, the base robot description does not include a pre-configured IK solver.
 - **Limitations:** The robot cannot inherently accept Cartesian commands (e.g., "Go to X=0.5, Y=0.2"). It only accepts Joint Space commands (angles).
 - **Implication of Developers:** Any test or feature involving Cartesian paths requires either implementing a custom IK solver or integrating the MoveIt 2 framework.
