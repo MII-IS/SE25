@@ -256,4 +256,68 @@ For example, developers can avoid launching RViz by:
 
 As long as the ROS 2 nodes responsible for control and state publishing are running, the system remains fully operational without graphical output.
 
+## 6. Contribution Guidelines
+
+This section defines the contribution workflow and quality requirements for developers contributing to the SE25 project. All contributions must follow these guidelines to ensure code consistency, maintainability, and system stability.
+
+By contributing to the SE25 project, developers agree to follow these guidelines in order to maintain a consistent and collaborative development process.
+
+
+
 This approach allows the simulation and control logic to be executed in environments where a display server is not available.
+
+---
+
+### 6.1 Branching Strategy
+
+The SE25 repository follows a lightweight branching strategy aligned with GitHub’s patch-based workflow:
+
+- **main**  
+  Stable branch containing reviewed and validated code only.  
+  Direct commits to this branch are not allowed.
+
+- **patch branches**  
+  All contributions must be developed in patch branches created directly from `main`.
+
+**Branch naming convention:**    
+username-patch-number
+
+
+**Workflow summary:**
+1. Create a new patch branch from `main`
+2. Implement the required changes
+3. Validate the changes locally
+4. Open a Pull Request targeting `main`
+5. Address review comments if required
+6. Merge after approval
+
+---
+
+### 6.2 Code Style and Formatting
+
+To maintain readability and consistency across the codebase, contributors must adhere to the following code style rules:
+
+#### C++ Code
+- **Standard:** C++17
+- **Formatter:** `clang-format`
+- All C++ source files (`.cpp`, `.hpp`) must be formatted using the project’s `.clang-format` configuration (if provided).
+
+
+---
+
+### 6.3 Pull Request Checklist
+
+Before submitting a Pull Request, ensure that all the following requirements are met:
+
+- Code builds successfully using `colcon build`
+- No existing functionality is broken
+- Changes are limited to the scope of the patch
+- New or modified behavior is documented where applicable
+- Code adheres to the defined formatting and style guidelines
+- Commit messages are clear and descriptive
+- The Pull Request description clearly explains what was changed and why
+
+Pull Requests that do not meet these criteria may be requested for revision or rejected.
+
+---
+
