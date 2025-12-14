@@ -136,3 +136,100 @@ This can be done by:
 - Pressing the **Reset** button in the graphical user interface
 
 Resetting the scene returns the robot to its predefined **Home position** and stops any ongoing motion, allowing the user to safely resume operation from a stable configuration.
+## 5. Controlling the Robot
+
+This section explains how users can control the robot both manually and through automated motion sequences.
+
+---
+
+### 5.1 Manual Control
+
+Manual control allows the user to move the robot joints directly in real time using the graphical user interface.
+
+**Steps to perform manual control:**
+
+1. Enable the robot using the **Enable** button in the GUI.  
+2. Adjust the **joint sliders** to move individual robot joints.  
+3. Observe the robot updating in real time in the 3D simulation view (RViz).  
+4. Press the **Reset** button to return the robot to its predefined **Home position** if needed.
+
+Manual control is useful for testing individual joint movements, understanding robot behavior, and verifying safety during operation.
+
+---
+
+### 5.2 Programmed (Automated) Control
+
+Automated control allows the robot to follow predefined sequences of poses using the **Path Manager** panel.
+
+**Steps to execute automated motion:**
+
+1. Open the **Path Manager** panel in the GUI.  
+2. Define one or more target poses for the robot to reach.  
+3. Configure the timing, velocity limits, and interpolation settings for each movement.  
+4. Press **Execute Path** to start the automated sequence.
+
+**Safety Features:**
+- The system monitors for collisions during execution.  
+- If a collision is detected or the **Emergency Stop** is activated, the robot motion stops immediately.  
+
+Automated control is suitable for executing complex trajectories without requiring constant manual intervention.
+## 6. Troubleshooting & FAQ
+
+This section provides guidance for common issues that users may encounter and information on how to obtain support.
+
+---
+
+### 6.1 Common Errors
+
+**Simulation runs slowly**  
+- Ensure that your GPU drivers are correctly installed.  
+- Close unnecessary background applications to free system resources.
+
+**Robot model fails to load**  
+- Verify that the workspace was built successfully.  
+- Ensure that the ROS 2 environment is correctly sourced in the current terminal session.
+
+**Robot stops unexpectedly**  
+- Check for collision warnings in the status panel.  
+- Ensure that the **Emergency Stop** is not activated.
+
+**Controllers fail to start**  
+- Confirm that all required ROS 2 nodes are running.  
+- Use ROS 2 tools to inspect controller status if necessary.
+
+---
+
+### 6.2 Support
+
+For any issues not covered above, users can report bugs or request help via the project repository:
+
+- **GitHub Issues:** [https://github.com/MII-IS/SE25/issues](https://github.com/MII-IS/SE25/issues)
+
+Include the following information when submitting an issue:
+- Operating system and version  
+- Steps to reproduce the problem  
+- Any error messages or screenshots
+
+---
+
+## 7. Appendix
+
+### 7.1 Keyboard Shortcuts
+
+| Action | Shortcut |
+|--------|---------|
+| Emergency Stop | GUI Button |
+| Reset Robot | GUI Button |
+| Enable Robot | GUI Button |
+
+> Note: Additional shortcuts may be added in future releases.
+
+---
+
+### 7.2 Glossary
+
+- **DOF (Degree of Freedom):** An independent axis of motion for the robot.  
+- **RViz:** ROS 2 visualization tool used to display the robot and its environment.  
+- **Trajectory:** A sequence of robot poses executed over time.  
+- **Emergency Stop:** A control that immediately halts all robot motion.  
+- **Path Manager:** GUI component used to define and execute automated motion sequences.
