@@ -2,7 +2,7 @@
 
 ## **1. Introduction & System Requirements**
 
-### **Purpose**
+### **1.1 Purpose**
 SE25 is a modular software system designed for **robot simulation, visualization, and control**. It enables users to:
 - Simulate 6-DOF robotic manipulators, mobile robots, and custom mechanisms
 - Perform path planning, inverse kinematics, and collision checking
@@ -11,12 +11,12 @@ SE25 is a modular software system designed for **robot simulation, visualization
 - Iintegrate with ROS2, RViz, and Gazebo
 - Import robot models in URDF, SDF, or custom formats.
 
-### **Prerequisites**
+### **1.2 Prerequisites**
 
 #### **Operating System Compatibility** (TBC)
 - **Linux (Ubuntu 22.04 recommended)**: full and easiest support 
-- **Windows 10/11**
-- **macOS** — limited support (no full ROS2 toolchain)
+- **Windows**: not supported
+- **macOS** : not supported
 
 #### **Hardware Requirements** (TBC)
 - **CPU:** Dual-core or better  
@@ -25,19 +25,28 @@ SE25 is a modular software system designed for **robot simulation, visualization
 - **Storage:** ~**1 GB** free disk space  
 
 #### **Software Dependencies**
-- Python 3.8+
-- ROS2 Humble / Iron
-- RViz2
-- Gazebo / Ignition
-- OpenGL-compatible graphics drivers
-- Python packages listed **TBU**
+- ROS 2 Jazzy Jalisco
+- RViz 2
+- CMake
+- colcon
+- rosdep
+- Git
+
+All required dependencies are installed during the setup process described below.
+
 
 ## **2. Installation and setup**  
-### **Installation Steps**
-Installation and build instructions are maintained in the main repository README to avoid duplication.
-Please follow:
-README.md (repository root)
+### **2.1 Installation Steps**
+Installation and build instructions are maintained in the main repository to avoid duplication.
+Please follow: ```WinOnUbuntu_SE25_V1.0_2025-11-01.md``` (repository root) and ```SystemManual_SE25_V1.0_13-12-2026.md``` that you can find in ```doc/guide```. 
 Official ROS 2 Jazzy documentation
 Ensure that:
-ROS 2 is correctly sourced
-The workspace builds successfully using colcon
+- ROS 2 is correctly sourced
+- The workspace builds successfully using COLCON
+### **2.2 First Launch**
+
+## **3. User Interface (UI) Overview** 
+The system interface consists of:
+- 3D Viewport (RViz): Displays the robot and environment
+- Control Panel (GUI): Used to control the robot
+- Status Area: Displays warnings, errors, and collision events
