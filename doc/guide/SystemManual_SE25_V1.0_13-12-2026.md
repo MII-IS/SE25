@@ -256,6 +256,86 @@ For example, developers can avoid launching RViz by:
 
 As long as the ROS 2 nodes responsible for control and state publishing are running, the system remains fully operational without graphical output.
 
+## 5. Testing & Validation
+This section outlines the testing strategy employed to verify the SE25 system. Due to the current architectural constraints (specifically the absence of an active Inverse Kinematics solver in the base configuration), the project employs a Dual Testing Strategy:
+
+- Manual Visual Verification: Used to validate the hardware interface, kinematic chain, and joint actuation capabilities.
+
+- Automated Unit Testing: Used to validate internal logic, safety checks, and path management requirements (REQ-F-006) using a mocking strategy.
+
+### 5.1 Manual Verification (Visual)
+The manual verification process utilizes a specific "Dancer Node" (move_robot_node) that generates harmonic trajectories for all joints (including the prismatic base). This verifies that the ros2_control loop is correctly processing commands and that the robot model does not collapse during movement.
+
+**Execution Procedure:** To perform this test, you must use two terminal instances.
+- ***Terminal 1: Launch the Environment:*** Start the standard controller launch file. This brings up the robot description, the controller manager, and the joint_state_publisher_gui (sliders).
+
+      cd SE25
+      source /opt/ros/jazzy/setup.bash
+      rosdep install --from-paths src --ignore-src -y
+      colcon build
+      source install/setup.bash
+      ros2 launch ros2_control_demo_example_7 r6bot_controller.launch.py
+
+    **⚠️ Important Step:** Once RViz and the GUI window appear, you must close or stop the "Joint State Publisher" GUI window (the sliders). Reasoning: The GUI publishes to the /joint_states topic. If left running, it will conflict with the commands sent by the test node, causing the robot to jitter or freeze.
+
+- ***Terminal 2: Run the Test Node:*** Once the sliders are closed, execute the specific test executable:
+  
+      cd SE25
+      source /opt/ros/jazzy/setup.bash
+      source install/setup.bash
+      run ros2_control_demo_example_7 move_robot_node
+  
+    **Expected Result:** In RViz, the robot should execute a continuous, smooth "dance" movement involving all 7 axes (base + 6 arm joints). There should be no "flickering" of links, indicating that the TF tree is stable.
+
+### 5.2 Automated Unit Testing
+The system includes a suite of automated unit tests written in C++ using Google Test (GTest). These tests focus on the Logic Layer (PathManager class).
+
+Since the physics engine is simulated via the hardware interface, these tests utilize a Mocking Strategy. Instead of testing against the full simulation loop, they test the internal logic to ensure it correctly validates inputs, enforces workspace limits (Safety), and rejects empty or malformed commands (Defect Testing).
+
+**Running the Test Suite:** To run the tests, use the standard colcon test command. The following command filters for the specific SE25 package and enables verbose output to see the validation logs:
+
+                  cd ~/SE25
+                  source /opt/ros/jazzy/setup.bash
+                  rosdep install --from-paths src --ignore-src -y
+                  colcon build
+                  source install/setup.bash
+                  colcon test --packages-select ros2_control_demo_example_7 --ctest-args -R test_req_f_006 --event-handlers console_direct+
+                  
+**Interpreting Results:** The test suite checks for both success and expected failure (robustness).
+
+- ***PASSED:*** Indicates the system behaved exactly as designed.
+
+- ***[Validation Fail] logs:*** If you see messages like [Validation Fail] Path is empty followed by a [ OK ] status, this is correct behavior. It confirms that the system successfully caught and blocked an invalid command.
+
+### 5.3 Adding New Tests
+Developers are encouraged to extend the test suite when adding new logical features (e.g., new safety limits, trajectory interpolation logic).
+
+**File Location:** 
+        
+        SE25/src/ros2_control_demo_example_7/test/test_path_manager.cpp
+
+To add a new test case, use the standard GTest macro ***TEST***. You must define the inputs, call the logic method, and assert the expected boolean result.
+
+**Example Template:**
+
+    // Example: Testing a new collision avoidance logic
+    TEST(PathManagerTest, NewCollisionCheck) {
+    PathManager manager;
+    
+    // 1. Define input (e.g., a point known to be inside an obstacle)
+    std::vector<Point> collision_path = { {1.0, 1.0, 1.0} };
+    
+    // 2. Action: Try to set the path
+    bool result = manager.setPath(collision_path);
+    
+    // 3. Assertion: Expect FALSE (System should reject it)
+    EXPECT_FALSE(result) << "System must reject paths causing collision";
+    }
+
+After adding the code, rebuild the package ***(colcon build)*** to compile the new tests before running ***colcon test*** again.
+
+
+####
 ## 6. Contribution Guidelines
 
 This section defines the contribution workflow and quality requirements for developers contributing to the SE25 project. All contributions must follow these guidelines to ensure code consistency, maintainability, and system stability.
@@ -321,3 +401,6 @@ Pull Requests that do not meet these criteria may be requested for revision or r
 
 ---
 
+## 7. Documentation of "Gotchas" / Known Limitations
+### 7.1 Performance Bottlenecks: 
+### 7.2 Physics Quirks: 
