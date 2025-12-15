@@ -38,4 +38,19 @@ if(BUILD_TESTING)
   target_link_libraries(test_req_f_006 path_logic)
 endif()
 
+# =========================================================
+# 5. REGLAS DE INSTALACIÓN (ESTO ARREGLA EL ERROR DEL LAUNCH)
+# =========================================================
+
+# Instalar carpetas de configuración (ESTO COPIA EL ARCHIVO launch.py)
+install(
+  DIRECTORY description/launch description/ros2_control description/urdf
+  DESTINATION share/ros2_control_demo_example_7
+)
+install(
+  DIRECTORY bringup/launch bringup/config
+  DESTINATION share/ros2_control_demo_example_7
+)
+
+
 ament_package()
