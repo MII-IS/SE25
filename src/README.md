@@ -1,45 +1,72 @@
-# SE25 Source Code
+## 6-DOF Robot Arm Simulation with ROS 2 Jazzy 
+This setup runs a 6-joint robotic arm using the official ROS 2 Control demos. 
+The robot is visualized in RViz 2, and each joint can be moved individually.
+Everything works on Ubuntu 24.04 LTS (also inside WSL 2 on Windows). 
 
-This directory contains the source code for the robotics project, which is copied from somewhere, generated and/or manually written based on the UML models located in the `../models` directory. The code in this folder is the implementation of the design specified in our Model-Based Systems and Software Engineering (MBSSE) approach.
 
-## Copied Code
+### Source 
+The example comes from the official ROS 2 Control Demos repository on GitHub: 
+- **ros-controls/ros2_control_demos**: This repository provides examples to illustrate ros2_control and ros2_controllers.  **Example 7** is used here, which contains a simple 6-DOF robot model with position control.
+---
+### Requirements
+Install these packages first:
+```bash
+sudo apt update
+sudo apt install -y \
+  build-essential git python3-colcon-common-extensions python3-rosdep \
+  ros-jazzy-desktop ros-jazzy-rviz2
 
-Most code comes from the ROS2 demo ...
+sudo rosdep init
+rosdep update
+```
+### Steps to run the project 
+**1. Clone the repository(develop branch)**
+```bash
+cd ~
+git clone -b develop https://github.com/MII-IS/SE25.git
+cd SE25
+```
 
-## Code Generation
+**2. Load ROS 2 environment**
+```bash
+source /opt/ros/jazzy/setup.bash
+```
+**3. Install dependencies**
+```bash
+rosdep install --from-paths src --ignore-src -r -y
+```
+**4. Build the workspace**
+```bash
+colcon build --symlink-install
+```
+**5. Activate the workspace**
+```bash
+source install/setup.bash
+```
+### Launch the Robot in RViz 2
+```bash
+ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
+```
+RViz 2 will open showing the robot with its six joints. 
 
-A significant portion of the code in this directory may be automatically generated from the UML models. This includes:
+### Quick Start (If You Already Installed Everything Before) 
+If you have already cloned the repository, installed dependencies, and built the workspace at least once, you do not need to repeat all the steps. Just run these commands in a new terminal to launch the robot directly:
+```bash
+source /opt/ros/jazzy/setup.bash
+cd ~/SE25
+source install/setup.bash
+ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
+```
+This will open RViz 2 and the Joint State Publisher GUI so you can move each joint manually, as well as adjust the position of the robot base.
 
-*   Class and data structures from the Block Definition Diagrams.
-*   State machine implementations from the State Machine Diagrams.
-*   Communication interfaces from the Internal Block Diagrams.
+### Moving the Joints Manually
+Once the robot appears in RViz 2, you can control each joint manually from the *Joint State Publisher GUI* window.  
+This tool lets you:
 
-The code generation process is managed by [Name of Code Generation Tool/Framework] and can be triggered by running the scripts in the `scripts/` directory.
+- Change the position of each of the six revolute joints using sliders or numeric input  
+- Translate the robot base along the X-axis using the new base slider
 
-## Manually Written Code
+As you move any slider, the robot model updates immediately in RViz to reflect the new configuration.  
+This is the simplest and most reliable way to test the robot’s movement—including base translation—without needing to publish commands from the terminal.
 
-While we strive for maximum code generation, some parts of the codebase require manual implementation. This typically includes:
 
-*   Complex algorithmic logic within methods.
-*   Hardware-specific driver implementations.
-*   Integration with third-party libraries.
-
-Manually written code is clearly marked and is designed to integrate seamlessly with the generated code.
-
-## Directory Structure
-
-The source code is organized by functionality, which mirrors the structure of the UML models:
-
-*   **`<component_name>/`**: Each directory corresponds to a major component or block defined in the system's structural model.
-    *   **`include/`**: Header files (`.h`, `.hpp`).
-    *   **`src/`**: Source files (`.cpp`, `.py`).
-*   **`main/`**: The main entry point of the application.
-*   **`generated/`**: Contains the auto-generated code from the models. It is recommended not to modify files in this directory directly.
-
-## Building the Code
-
-To build the code, please follow the instructions in the main `README.md` file located at the root of the project. Ensure you have all the required dependencies and build tools installed.
-
-## Relationship to Models
-
-The traceability between the code and the models is crucial. Each component and major class in the source code should correspond to an element in the UML models. For any questions regarding the implementation of a specific model element, please refer to the relevant diagram in the `../models` directory.

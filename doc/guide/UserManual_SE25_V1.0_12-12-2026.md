@@ -1,0 +1,210 @@
+# **User Manual – Robot Simulation Control Software**
+
+## **1. Introduction & System Requirements**
+
+### **1.1 Purpose**
+SE25 is a modular software system designed for **robot simulation, visualization, and control**. It enables users to:
+- Simulate 6-DOF robotic manipulators, mobile robots, and custom mechanisms
+- Perform path planning, inverse kinematics, and collision checking
+- Build virtual environments with obstacles, fixtures, and workpieces
+- Execute motion scripts and test robot behavior safely before deployment
+- Iintegrate with ROS2, RViz, and Gazebo
+- Import robot models in URDF, SDF, or custom formats.
+
+### **1.2 Prerequisites**
+
+#### **Operating System Compatibility** (TBC)
+- **Linux (Ubuntu 22.04 recommended)**: full and easiest support 
+- **Windows**: not supported
+- **macOS** : not supported
+
+#### **Hardware Requirements** (TBC)
+- **CPU:** Dual-core or better  
+- **RAM:** *8 GB minimum* (16 GB recommended)  
+- **GPU:** OpenGL 3.3+ compatible GPU (dedicated GPU recommended)  
+- **Storage:** ~**1 GB** free disk space  
+
+#### **Software Dependencies**
+- ROS 2 Jazzy Jalisco
+- RViz 2
+- CMake
+- colcon
+- rosdep
+- Git
+
+All required dependencies are installed during the setup process described below.
+
+
+## **2. Installation and setup**  
+### **2.1 Installation Steps**
+Installation and build instructions are maintained in the main repository to avoid duplication.
+Please follow: ```WinOnUbuntu_SE25_V1.0_2025-11-01.md``` (repository root) and ```SystemManual_SE25_V1.0_13-12-2026.md``` that you can find in ```doc/guide```. 
+Official ROS 2 Jazzy documentation
+Ensure that:
+- ROS 2 is correctly sourced
+- The workspace builds successfully using COLCON
+### **2.2 First Launch**
+
+## **3. User Interface (UI) Overview** 
+This section explains the main elements of the graphical interface and how users interact with the system during normal operation.
+
+
+### 3.1 Main Interface Layout
+When the system is running, the user interacts with two main visual components:
+
+- **3D Simulation View (RViz)** – shows the robot, its motion, and the environment
+- **Control Interface (GUI)** – used to command and monitor the robot
+
+The following image shows the **extended robot model** as visualized during execution:
+ <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/Robot_extended.png" />  
+
+### 3.2 3D Simulation View (RViz)
+
+The 3D view is the main visual feedback area and behaves similarly to a game camera.
+
+From this view, users can:
+- Observe the robot in real time
+- See joint movements and base translation
+- Zoom, rotate, and pan the camera freely
+
+The robot cannot be controlled directly from this view. All commands are issued through the control panel.
+
+---
+
+### 3.3 Control Interface (GUI)
+
+The control interface acts as the **command center** of the system.
+
+It provides:
+- **Joint sliders** for each robot joint
+- **Base movement slider** (extended robot only)
+- **Path Manager** for automated motion execution
+
+Changes applied in the GUI are reflected instantly in the 3D view, allowing users to clearly see the effect of each action.
+
+---
+
+### 3.4 Status and Feedback (TBU) 
+
+The interface continuously provides feedback to the user, including:
+- Collision warnings
+- Execution status of automated paths
+- Error or safety notifications
+
+If a collision or unsafe condition is detected, the system immediately stops the robot and displays a warning message.
+
+This feedback loop ensures that users always understand the current state of the simulation.
+
+## 4. Setting Up the Simulation Scene
+
+This section describes how the simulation scene is initialized and how the user can restore it to a known state during execution.
+
+---
+
+### 4.1 Loading a Robot
+
+When the system is launched, a robot model is loaded automatically as part of the startup process.
+
+The available robot configurations are:
+- `robot_initial`
+- `robot_extended`
+
+The robot model is selected through the system launch configuration. The user is not required to perform any additional actions to load the robot, and no model selection is exposed through the graphical user interface.
+
+---
+
+### 4.2 Simulation Environment
+
+Once the system starts, the simulation environment is initialized automatically.
+
+The environment includes:
+- A fixed floor used as a reference surface
+- Coordinate reference frames used for visualization and motion tracking
+
+The environment configuration is predefined. Interaction with or modification of the environment is not performed through the user interface.
+
+---
+
+### 4.3 Resetting the Scene
+
+At any time during operation, the user can restore the system to a known initial state.
+
+This can be done by:
+- Pressing the **Reset** button in the graphical user interface
+
+Resetting the scene returns the robot to its predefined **Home position** and stops any ongoing motion, allowing the user to safely resume operation from a stable configuration.
+
+## 5. Controlling the Robot
+
+This section explains how users can control the robot both manually and through automated motion sequences.
+
+---
+
+### 5.1 Manual Control
+
+Manual control allows the user to move the robot joints directly in real time using the graphical user interface.
+
+**Steps to perform manual control:**
+
+1. Enable the robot using the **Enable** button in the GUI.  
+2. Adjust the **joint sliders** to move individual robot joints.  
+3. Observe the robot updating in real time in the 3D simulation view (RViz).  
+4. Press the **Reset** button to return the robot to its predefined **Home position** if needed.
+
+Manual control is useful for testing individual joint movements, understanding robot behavior, and verifying safety during operation.
+
+---
+
+### 5.2 Programmed (Automated) Control (TBU)
+
+Automated control allows the robot to follow predefined sequences of poses using the **Path Manager** panel.
+
+**Steps to execute automated motion:**
+
+1. Open the **Path Manager** panel in the GUI.  
+2. Define one or more target poses for the robot to reach.  
+3. Configure the timing, velocity limits, and interpolation settings for each movement.  
+4. Press **Execute Path** to start the automated sequence.
+
+
+## 6. Troubleshooting & FAQ
+
+This section provides guidance for common issues that users may encounter and information on how to obtain support.
+
+---
+
+### 6.1 Common Errors
+
+**Simulation runs slowly**  
+- Ensure that your GPU drivers are correctly installed.  
+- Close unnecessary background applications to free system resources.
+
+**Robot model fails to load**  
+- Verify that the workspace was built successfully.  
+- Ensure that the ROS 2 environment is correctly sourced in the current terminal session.
+
+**Controllers fail to start**  
+- Confirm that all required ROS 2 nodes are running.  
+- Use ROS 2 tools to inspect controller status if necessary.
+
+---
+### 6.2 Support
+
+For any issues not covered above, users can report bugs or request help via the project repository:
+
+- **GitHub Issues:** [https://github.com/MII-IS/SE25/issues](https://github.com/MII-IS/SE25/issues)
+
+Include the following information when submitting an issue:
+- Operating system and version  
+- Steps to reproduce the problem  
+- Any error messages or screenshots
+
+---
+
+## 7. Appendix
+
+- **DOF (Degree of Freedom):** An independent axis of motion for the robot.  
+- **RViz:** ROS 2 visualization tool used to display the robot and its environment.  
+- **Trajectory:** A sequence of robot poses executed over time.  
+- **Emergency Stop:** A control that immediately halts all robot motion.  
+- **Path Manager:** GUI component used to define and execute automated motion sequences.

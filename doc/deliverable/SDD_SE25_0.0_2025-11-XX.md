@@ -86,15 +86,13 @@ These components communicate in real-time using ROS 2 middleware, enabling synch
 
 > **Note:** The System of Interest (SoI) is the software-only simulation and control system, not the physical robot.
 
-> **Suggested Diagram:** Context diagram or system block diagram.
+
 
 ### 2.2 Main Functionalities
 The system provides the following core functionalities:
 - Load and visualize a robotic arm model in a 3D simulation environment.
 - Allow manual control of individual joints via a graphical user interface.
-- Enable automated execution of predefined motion trajectories.
 - Display real-time feedback of the robot’s pose and state.
-- Detect collisions with virtual obstacles and trigger emergency stop procedures.
 - Maintain low-latency communication between control and simulation components.
 
 ### 2.3 Design Constraints
@@ -128,8 +126,8 @@ The SE25 system follows a distributed architecture composed of two main subsyste
 
 These subsystems communicate via ROS 2 middleware using a publish/subscribe model. The architecture supports real-time data exchange and modular development, enabling parallel work by simulation and control teams.
 
-> **Suggested Diagram:** Component diagram showing ROS 2 nodes and their interactions.  
-> **Suggested Diagram:** Component or package UML diagram.
+
+>  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/ReverseEngineering.png" />  
 
 ### 3.2 Main Components
 
@@ -147,12 +145,12 @@ The system components interact through ROS 2 topics:
 
 - */joint_commands:* Control GUI → Simulation Engine
 - */robot_state:* Simulation Engine → Control GUI
-- */collision_event:* Simulation Engine → Control GUI (for emergency stop)
 
 Each component is implemented as a ROS 2 node, enabling modular deployment and testing. The publish/subscribe model ensures decoupling and scalability.
 
-> **Suggested Diagram:** Sequence diagram showing message flow during a control cycle.  
-> **Suggested Diagram:** Sequence or communication diagram.
+
+> **Interaction Sequence Diagram:** 
+>  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/Interaction_Sequence_diagram.png" />  
 
 ### 3.4 Design Rationale
 The architecture was chosen to support:
@@ -182,7 +180,7 @@ Data Structures:
 **Trajectory:** List of target poses with timing information.  
 
 
-> **Suggested Diagram:** UML class diagram showing relationships between core classes..
+
 
 ### 4.2 Key Algorithms
 Describe important algorithms (e.g., control logic, path planning, collision detection).
@@ -201,18 +199,15 @@ The UI is built using a GUI framework compatible with ROS 2 (e.g., Qt or rqt). I
 - **Joint Control Panel:** Sliders for each joint.
 - **Trajectory Editor:** Allows users to define and preview motion paths.
 - **State Display:** Real-time visualization of robot pose and joint values.
-- **Emergency Stop Button:** Immediately halts robot motion.
 
 
-> **Suggested Elements:** Wireframes or screenshots of the GUI layout.  
-> **Suggested Elements:** Wireframes, flowcharts, screen mockups.
+>  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/Robot_extended.png" />  
 
 ### 4.4 Error and Exception Handling
 The system includes robust error-handling mechanisms:
 
 - **ROS 2 Node Failures:** Logged and reported via diagnostics.
 - **Invalid Commands:** Ignored or rejected with warning messages.
-- **Collision Events:** Trigger emergency stop and notify user.
 - **Communication Failures:** Retries or fallback procedures.
 
 All exceptions are logged with timestamps and severity levels. Critical errors halt the system safely.
@@ -301,7 +296,7 @@ This section includes supplementary diagrams that support the architectural and 
 - **Activity Diagrams**: Illustrating workflows like trajectory execution, collision response, and emergency stop.
 - **Component Diagrams**: Depicting the high-level architecture and ROS 2 node relationships.
 
-> Diagrams should be versioned and stored in the GitHub repository under `/docs/diagrams`.
+
 
 ---
 

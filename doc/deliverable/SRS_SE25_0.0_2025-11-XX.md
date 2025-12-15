@@ -99,7 +99,7 @@ The communication between these subsystems is implemented using **ROS 2 Jazzy Ja
 - `/ControlCommands` topic: control interface sends joint commands to the simulation.  
 
 Thus, the system integrates **simulation accuracy** with **user interactivity** while adhering to real-time performance constraints.
-<img width="2335" height="1240" alt="image" src="../images/sysml_structure.png" />
+<img width="2335" height="1240" alt="image" src=https://github.com/MII-IS/SE25/blob/develop/images/sysml_structure.png />
 
 
 
