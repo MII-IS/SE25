@@ -302,7 +302,6 @@ Since the physics engine is simulated via the hardware interface, these tests ut
 
 **Running the Test Suite:** To run the tests, use the standard colcon test command. The following command filters for the specific SE25 package and enables verbose output to see the validation logs:
 
-                  git clone -b develop https://github.com/MII-IS/SE25.git
                   cd ~/SE25
                   source /opt/ros/jazzy/setup.bash
                   rosdep install --from-paths src --ignore-src -y
