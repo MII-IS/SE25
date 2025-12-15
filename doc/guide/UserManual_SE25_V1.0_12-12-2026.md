@@ -65,7 +65,6 @@ The 3D view is the main visual feedback area and behaves similarly to a game cam
 From this view, users can:
 - Observe the robot in real time
 - See joint movements and base translation
-- Detect collisions and abnormal behavior
 - Zoom, rotate, and pan the camera freely
 
 The robot cannot be controlled directly from this view. All commands are issued through the control panel.
@@ -79,15 +78,13 @@ The control interface acts as the **command center** of the system.
 It provides:
 - **Joint sliders** for each robot joint
 - **Base movement slider** (extended robot only)
-- **Enable / Disable button** to activate motion
-- **Emergency Stop** for immediate halt
 - **Path Manager** for automated motion execution
 
 Changes applied in the GUI are reflected instantly in the 3D view, allowing users to clearly see the effect of each action.
 
 ---
 
-### 3.4 Status and Feedback
+### 3.4 Status and Feedback (TBU) 
 
 The interface continuously provides feedback to the user, including:
 - Collision warnings
@@ -158,7 +155,7 @@ Manual control is useful for testing individual joint movements, understanding r
 
 ---
 
-### 5.2 Programmed (Automated) Control
+### 5.2 Programmed (Automated) Control (TBU)
 
 Automated control allows the robot to follow predefined sequences of poses using the **Path Manager** panel.
 
