@@ -274,18 +274,10 @@ The manual verification process utilizes a specific "Dancer Node" (move_robot_no
 **Execution Procedure:** To perform this test, you must use two terminal instances.
 - ***Terminal 1: Launch the Environment:*** Start the standard controller launch file. This brings up the robot description, the controller manager, and the joint_state_publisher_gui (sliders).
 
-      sudo apt update
-      sudo apt install -y \
-      build-essential git python3-colcon-common-extensions python3-rosdep \
-      ros-jazzy-desktop ros-jazzy-rviz2
-
-      sudo rosdep init
-      rosdep update
-      cd ~
       git clone -b develop https://github.com/MII-IS/SE25.git
-      cd SE25
+      cd ~/SE25
       source /opt/ros/jazzy/setup.bash
-      rosdep install --from-paths src --ignore-src -r -y
+      sudo rosdep install -i --from-paths src --rosdistro jazzy -y
       colcon build --symlink-install
       source install/setup.bash
       ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
@@ -310,6 +302,7 @@ Since the physics engine is simulated via the hardware interface, these tests ut
 
 **Running the Test Suite:** To run the tests, use the standard colcon test command. The following command filters for the specific SE25 package and enables verbose output to see the validation logs:
 
+                  git clone -b develop https://github.com/MII-IS/SE25.git
                   cd ~/SE25
                   source /opt/ros/jazzy/setup.bash
                   rosdep install --from-paths src --ignore-src -y
