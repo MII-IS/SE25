@@ -35,16 +35,56 @@ SE25 is a modular software system designed for **robot simulation, visualization
 All required dependencies are installed during the setup process described below.
 
 
-## **2. Installation and setup**  
+## **2. Installation and Setup**
+
+This section explains how to install, build, and run the robot simulation as described in the project source documentation.
+
+---
+
 ### **2.1 Installation Steps**
-Installation and build instructions are maintained in the main repository to avoid duplication.
-Please follow: ```WinOnUbuntu_SE25_V1.0_2025-11-01.md``` (repository root) and ```SystemManual_SE25_V1.0_13-12-2026.md``` that you can find in ```doc/guide```. 
-Official ROS 2 Jazzy documentation
-Ensure that:
-- ROS 2 is correctly sourced
-- The workspace builds successfully using COLCON
+Installation and build instructions are maintained in the repository source folder to avoid duplication and keep the User Manual aligned with the latest setup procedure.
+
+Please follow the README located in:
+- [src README](src/README.md) (the README inside the `src/` folder)
+
+That README includes the full step-by-step procedure to:
+- Install the required packages (ROS 2 Jazzy, RViz 2, colcon, rosdep, etc.)
+- Resolve dependencies using `rosdep`
+- Build the workspace using `colcon`
+- Source the workspace environment before running the system
+
+Before proceeding, ensure that:
+- ROS 2 is correctly installed and sourced in your terminal session
+- The workspace builds successfully without errors
+
+---
 ### **2.2 First Launch**
 
+After completing the installation and build process, the system can be launched from a terminal session.
+
+1. **Source the workspace**  
+   Open a terminal in the workspace root directory and source the environment:
+   ```bash
+   source install/setup.bash
+   ```
+2. **Start the simulation**
+Launch the robot simulation using the command specified in the `src` README:    
+ ```bash
+   ros2 launch ros2_control r6bot.launch.py
+ ```
+
+3. **Expected behavior on first launch**
+- RViz 2 opens automatically.
+- The 3D visualization displays the robot model loaded into the scene.
+- The robot appears in its predefined Home position.
+- ROS 2 controllers and required nodes are initialized automatically.
+
+4. **Initial verification**
+The first launch is successful if:
+- The robot model is visible and correctly rendered in RViz.
+- The robot responds to user commands through the control interface.
+- No critical error messages are shown in the terminal.
+ 
 ## **3. User Interface (UI) Overview** 
 This section explains the main elements of the graphical interface and how users interact with the system during normal operation.
 
