@@ -66,7 +66,7 @@ Install any missing ROS package dependencies and build the workspace:
 rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
 ```
-####1.3.1 Developer / Debug Build
+#### 1.3.1 Developer / Debug Build
 If low-level debugging is required (e.g., using GDB or analyzing crashes), you can build with debug symbols enabled:
 ```bash
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Debug
@@ -105,13 +105,18 @@ SE25/
 │   │   ├── SRS_SE25_*.md           # Software Requirements Specification
 │   │   └── UMLToolEvaluation*.md   # UML tool evaluation report
 │   └── guide/                      # Internal development guides
-│       ├── CodeStyleGuide_*.md
-│       ├── ConfigurationManagementPlan_*.md
-│       ├── InverseEngineering_*.md│       
-│       ├── SimulationRobotRviz_*.md
-│       ├── SoftwareDevelopmentPlan_ *.md
-│       ├── UserManual_  *.md
-│       └── WinOnUbuntu *.md
+│   |   ├── CodeStyleGuide_*.md
+│   |   ├── ConfigurationManagementPlan_*.md
+│   |   ├── InverseEngineering_*.md│       
+│   |   ├── SimulationRobotRviz_*.md
+│   |   ├── SoftwareDevelopmentPlan_ *.md
+│   |   ├── UserManual_  *.md
+│   |   └── WinOnUbuntu *.md
+|   |
+|   |── tests/
+│         ├── test_bailarin.cpp
+|         ├── test_path_manager.cpp
+|
 │
 ├── images/                         # Diagrams and visual assets (UML, SysML, architecture)
 │
@@ -375,4 +380,37 @@ Before submitting a Pull Request, ensure that all the following requirements are
 Pull Requests that do not meet these criteria may be requested for revision or rejected.
 
 ---
+
+## 7. Documentation of "Gotchas" / Known Limitations
+This section documents known limitations, quirks, and common pitfalls encountered during the development of the SE25 system. These "gotchas" are inherent to the current architectural choices (Mock Hardware and no active IK).
+### 7.1 Performance Bottlenecks & Concurrency Issues
+#### The "Joint State" Race Condition: 
+The most critical performance issue in the current setup arises when multiple nodes attempt to publish to the /joint_states topic simultaneously.
+- **Scenario:** Running the joint_state_publisher_gui (the window with sliders) while simultaneously running an automated control node (e.g., move_robot_node).
+- **Symptom:** The robot visualization in RViz will jitter, flicker, or jump rapidly between two positions. This happens because RViz receives conflicting state messages: one from the sliders (static) and one from the controller (moving).
+- **Workaround:** Always terminate the GUI slider application before launching any automated control node.
+#### RViz Rendering Load:
+ While the control logic is lightweight, the visualization of the high-fidelity meshes in RViz 2 can be GPU-intensive. If the simulation lags, consider disabling "Shadows" in the RViz Global Options or reducing the update rate of the robot_state_publisher.
+
+### 7.2 Physics Quirks & Simulation Limitations
+Since the system runs on a Mock Hardware Interface (RobotSystem plugin) rather than a full physics engine (like Gazebo or Ignition), the following physical behaviors are not simulated:
+#### Perfect Actuation (No Dynamics):
+The mock hardware assumes "perfect execution." It does not simulate gravity, friction, inertia, or motor torque limits. If a controller commands a joint to move from 0° to 90° in 0.01 seconds, the visualization will show it happening instantly, even if physically impossible.
+#### No Collision Detection:
+The current mock backend acts purely as a kinematic state echo. It does not perform collision checking.
+- **Quirk:** The robot arm can pass through the floor, the base, or itself without stopping or generating an error. Collision avoidance must be handled at the planning layer (e.g., MoveIt), which is not active in the base configuration.
+#### Lack of Inverse Kinematics (IK): 
+As discovered during the implementation of REQ-F-006, the base robot description does not include a pre-configured IK solver.
+- **Limitations:** The robot cannot inherently accept Cartesian commands (e.g., "Go to X=0.5, Y=0.2"). It only accepts Joint Space commands (angles).
+- **Implication of Developers:** Any test or feature involving Cartesian paths requires either implementing a custom IK solver or integrating the MoveIt 2 framework.
+### 7.3 Environment & Build Gotchas
+#### Sourcing the Overlay:
+A frequent source of "Command not found" or "Package not found" errors is the failure to source the local workspace overlay.
+- **Rule:** You must run source install/setup.bash in every new terminal window, even if you have already sourced the global ROS 2 installation.
+#### Colcon Symlink Install:
+When modifying Python launch files or descriptions, changes might not appear unless the project was built with symbolic links.
+- **Recommendation:** Always build using colcon build --symlink-install. This allows you to modify launch files and Python scripts without recompiling every time.
+
+
+
 

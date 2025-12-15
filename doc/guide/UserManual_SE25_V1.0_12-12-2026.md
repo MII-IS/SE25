@@ -136,6 +136,7 @@ This can be done by:
 - Pressing the **Reset** button in the graphical user interface
 
 Resetting the scene returns the robot to its predefined **Home position** and stops any ongoing motion, allowing the user to safely resume operation from a stable configuration.
+
 ## 5. Controlling the Robot
 
 This section explains how users can control the robot both manually and through automated motion sequences.
@@ -168,11 +169,7 @@ Automated control allows the robot to follow predefined sequences of poses using
 3. Configure the timing, velocity limits, and interpolation settings for each movement.  
 4. Press **Execute Path** to start the automated sequence.
 
-**Safety Features:**
-- The system monitors for collisions during execution.  
-- If a collision is detected or the **Emergency Stop** is activated, the robot motion stops immediately.  
 
-Automated control is suitable for executing complex trajectories without requiring constant manual intervention.
 ## 6. Troubleshooting & FAQ
 
 This section provides guidance for common issues that users may encounter and information on how to obtain support.
@@ -189,16 +186,11 @@ This section provides guidance for common issues that users may encounter and in
 - Verify that the workspace was built successfully.  
 - Ensure that the ROS 2 environment is correctly sourced in the current terminal session.
 
-**Robot stops unexpectedly**  
-- Check for collision warnings in the status panel.  
-- Ensure that the **Emergency Stop** is not activated.
-
 **Controllers fail to start**  
 - Confirm that all required ROS 2 nodes are running.  
 - Use ROS 2 tools to inspect controller status if necessary.
 
 ---
-
 ### 6.2 Support
 
 For any issues not covered above, users can report bugs or request help via the project repository:
@@ -213,20 +205,6 @@ Include the following information when submitting an issue:
 ---
 
 ## 7. Appendix
-
-### 7.1 Keyboard Shortcuts
-
-| Action | Shortcut |
-|--------|---------|
-| Emergency Stop | GUI Button |
-| Reset Robot | GUI Button |
-| Enable Robot | GUI Button |
-
-> Note: Additional shortcuts may be added in future releases.
-
----
-
-### 7.2 Glossary
 
 - **DOF (Degree of Freedom):** An independent axis of motion for the robot.  
 - **RViz:** ROS 2 visualization tool used to display the robot and its environment.  
