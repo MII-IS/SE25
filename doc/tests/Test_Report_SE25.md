@@ -15,11 +15,11 @@
 | **REQ-F-004** (Real-time Pose) | YES | Visual Inspection | **PASS** |
 | **REQ-F-005** (Joint Control) | YES | Manual Test | **PASS** |
 | **REQ-F-006** (Path Execution) | YES | **Automated Unit Test** | **PASS** |
-| **REQ-F-007** (Collision Detection) | YES | Unit Test (Mocked) | **PASS** |
-| **REQ-F-008** (Collision Stop) | YES | Unit Test (Mocked) | **PASS** |
-| **REQ-F-009** (Teach-In) | NO | N/A | **N/A** |
-| **REQ-F-010** (Emergency Stop) | YES | Manual Test | **PASS** |
-| **REQ-F-011** (Pause/Resume) | NO | N/A | **N/A** |
+| **REQ-F-007** (Collision Detection) | NO | --- | **NO PASS** |
+| **REQ-F-008** (Collision Stop) | NO | --- | **NO PASS** |
+| **REQ-F-009** (Teach-In) | NO | N/A | **NO PASS** |
+| **REQ-F-010** (Emergency Stop) | NO | Manual Test | **NO PASS** |
+| **REQ-F-011** (Pause/Resume) | NO | N/A | **NO PASS** |
 | **REQ-F-012** (User Status Panel) | YES | Automated Unit Test | **PASS** |
 
 ## 2. Non-Functional Requirements (REQ-N)
