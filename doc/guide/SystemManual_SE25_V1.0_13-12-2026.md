@@ -274,12 +274,23 @@ The manual verification process utilizes a specific "Dancer Node" (move_robot_no
 **Execution Procedure:** To perform this test, you must use two terminal instances.
 - ***Terminal 1: Launch the Environment:*** Start the standard controller launch file. This brings up the robot description, the controller manager, and the joint_state_publisher_gui (sliders).
 
+      sudo apt update
+      sudo apt install -y \
+      build-essential git python3-colcon-common-extensions python3-rosdep \
+      ros-jazzy-desktop ros-jazzy-rviz2
+
+      sudo rosdep init
+      rosdep update
+      cd ~
+      git clone -b develop https://github.com/MII-IS/SE25.git
       cd SE25
       source /opt/ros/jazzy/setup.bash
-      rosdep install --from-paths src --ignore-src -y
-      colcon build
+      rosdep install --from-paths src --ignore-src -r -y
+      colcon build --symlink-install
       source install/setup.bash
-      ros2 launch ros2_control_demo_example_7 r6bot_controller.launch.py
+      ros2 launch ros2_control_demo_example_7 view_r6bot.launch.py
+
+
 
     **⚠️ Important Step:** Once RViz and the GUI window appear, you must close or stop the "Joint State Publisher" GUI window (the sliders). Reasoning: The GUI publishes to the /joint_states topic. If left running, it will conflict with the commands sent by the test node, causing the robot to jitter or freeze.
 
