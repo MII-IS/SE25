@@ -327,7 +327,7 @@ source ~/.bashrc
 ```
 bash
 cd ~/ros2_ws/src
-git clone -b develop https://github.com/MII-IS/SE25.git
+git clone -b main https://github.com/MII-IS/SE25.git
 cd SE25
 ```
 
