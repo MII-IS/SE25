@@ -37,15 +37,15 @@ To explore the requirements traceability, modify diagrams, or generate new docum
 
 ### Opening the Project (Using the ZIP File)
 
-The Modelio projects are stored compressed in **ZIP files** within their respective folders in the repository (e.g., inside `Requisitos/` or `Reverse_model/`). Modelio can import these files directly.
+The Modelio projects are stored compressed in **ZIP files** within their respective folders in the repository (e.g., inside `Requirements/` or `Reverse_model/`). Modelio can import these files directly.
 
 1.  **Clone the Repository:** Use GitHub Desktop to clone this repository onto your local machine.
 2.  **Locate the File:** Once cloned, navigate to the specific model folder you want to work on.
-    * *Example:* `SE25/models/Requisitos/`
+    * *Example:* `SE25/models/Requirements/`
 3.  **Import in Modelio:**
     * Open the **Modelio 5.4** application.
     * Go to the `File` menu and select **`Import a project...`**.
-    * Navigate to the target folder (e.g., `SE25/models/Requisitos/`) and **select the Modelio project ZIP file**. Modelio will handle the decompression and import process.
+    * Navigate to the target folder (e.g., `SE25/models/Requirements/`) and **select the Modelio project ZIP file**. Modelio will handle the decompression and import process.
 
 ---
 
@@ -55,7 +55,7 @@ If you have made modifications or added new requirements in Modelio and wish to 
 
 1.  **Compress the Project:** Once changes are saved in Modelio, navigate to the folder of your local Modelio project (the *unzipped folder* where the project files reside). **Compress all content** of the Modelio project back into a single **ZIP file**.
 2.  **Replace the ZIP:** Place this new ZIP file into the corresponding repository folder. It must **overwrite** the previous ZIP file.
-    * *Example:* If you modified requirements, overwrite the ZIP inside `SE25/models/Requisitos/`.
+    * *Example:* If you modified requirements, overwrite the ZIP inside `SE25/models/Requirements/`.
 3.  **Synchronize with GitHub:**
     * Open GitHub Desktop.
     * You will see that the new ZIP file appears as modified.
