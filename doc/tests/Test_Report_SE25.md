@@ -31,7 +31,7 @@
 | **REQ-N-004** (ROS 2 Framework) | NO | --- | **NO PASS** |
 | **REQ-N-005** (Concurrency POSIX) | NO | --- | **NO PASS** |
 | **REQ-N-006** (Git Version Control) | NO | --- | **NO PASS** |
-| **REQ-N-007** (Documentation) | NO | --- | **NO PASS** |
+| **REQ-N-007** (Documentation) | YES | Continuous Inspection | **PASS** |
 | **REQ-N-008** (Startup Time < 10s) | NO | --- | **NO PASS** |
 | **REQ-N-009** (Responsive System) | NO | --- | **NO PASS** |
 
