@@ -35,16 +35,56 @@ SE25 is a modular software system designed for **robot simulation, visualization
 All required dependencies are installed during the setup process described below.
 
 
-## **2. Installation and setup**  
+## **2. Installation and Setup**
+
+This section explains how to install, build, and run the robot simulation as described in the project source documentation.
+
+---
+
 ### **2.1 Installation Steps**
-Installation and build instructions are maintained in the main repository to avoid duplication.
-Please follow: ```WinOnUbuntu_SE25_V1.0_2025-11-01.md``` (repository root) and ```SystemManual_SE25_V1.0_13-12-2026.md``` that you can find in ```doc/guide```. 
-Official ROS 2 Jazzy documentation
-Ensure that:
-- ROS 2 is correctly sourced
-- The workspace builds successfully using COLCON
+Installation and build instructions are maintained in the repository source folder to avoid duplication and keep the User Manual aligned with the latest setup procedure.
+
+Please follow the README located in:
+- [src README](src/README.md) (the README inside the `src/` folder)
+
+That README includes the full step-by-step procedure to:
+- Install the required packages (ROS 2 Jazzy, RViz 2, colcon, rosdep, etc.)
+- Resolve dependencies using `rosdep`
+- Build the workspace using `colcon`
+- Source the workspace environment before running the system
+
+Before proceeding, ensure that:
+- ROS 2 is correctly installed and sourced in your terminal session
+- The workspace builds successfully without errors
+
+---
 ### **2.2 First Launch**
 
+After completing the installation and build process, the system can be launched from a terminal session.
+
+1. **Source the workspace**  
+   Open a terminal in the workspace root directory and source the environment:
+   ```bash
+   source install/setup.bash
+   ```
+2. **Start the simulation**
+Launch the robot simulation using the command specified in the `src` README:    
+ ```bash
+   ros2 launch ros2_control r6bot.launch.py
+ ```
+
+3. **Expected behavior on first launch**
+- RViz 2 opens automatically.
+- The 3D visualization displays the robot model loaded into the scene.
+- The robot appears in its predefined Home position.
+- ROS 2 controllers and required nodes are initialized automatically.
+
+4. **Initial verification**
+The first launch is successful if:
+- The robot model is visible and correctly rendered in RViz.
+- The robot responds to user commands through the control interface.
+- No critical error messages are shown in the terminal.
+ 
 ## **3. User Interface (UI) Overview** 
 This section explains the main elements of the graphical interface and how users interact with the system during normal operation.
 
@@ -57,6 +97,8 @@ When the system is running, the user interacts with two main visual components:
 
 The following image shows the **extended robot model** as visualized during execution:
  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/Robot_extended.png" />  
+ -**Center button**: For RESET
+ -**Randomize**: Gives a random position. 
 
 ### 3.2 3D Simulation View (RViz)
 
@@ -81,19 +123,6 @@ It provides:
 - **Path Manager** for automated motion execution
 
 Changes applied in the GUI are reflected instantly in the 3D view, allowing users to clearly see the effect of each action.
-
----
-
-### 3.4 Status and Feedback (TBU) 
-
-The interface continuously provides feedback to the user, including:
-- Collision warnings
-- Execution status of automated paths
-- Error or safety notifications
-
-If a collision or unsafe condition is detected, the system immediately stops the robot and displays a warning message.
-
-This feedback loop ensures that users always understand the current state of the simulation.
 
 ## 4. Setting Up the Simulation Scene
 
@@ -145,17 +174,15 @@ This section explains how users can control the robot both manually and through 
 Manual control allows the user to move the robot joints directly in real time using the graphical user interface.
 
 **Steps to perform manual control:**
-
-1. Enable the robot using the **Enable** button in the GUI.  
-2. Adjust the **joint sliders** to move individual robot joints.  
-3. Observe the robot updating in real time in the 3D simulation view (RViz).  
-4. Press the **Reset** button to return the robot to its predefined **Home position** if needed.
+1. Adjust the **joint sliders** to move individual robot joints.  
+2. Observe the robot updating in real time in the 3D simulation view (RViz).  
+3. Press the **Reset** button to return the robot to its predefined **Home position** if needed.
 
 Manual control is useful for testing individual joint movements, understanding robot behavior, and verifying safety during operation.
 
 ---
 
-### 5.2 Programmed (Automated) Control (TBU)
+### 5.2 Programmed (Automated) Control (DELETE???)
 
 Automated control allows the robot to follow predefined sequences of poses using the **Path Manager** panel.
 
