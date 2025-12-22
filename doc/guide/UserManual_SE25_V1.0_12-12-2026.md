@@ -97,8 +97,8 @@ When the system is running, the user interacts with two main visual components:
 
 The following image shows the **extended robot model** as visualized during execution:
  <img width="2335" height="1240" alt="Scenario 1" src="https://github.com/MII-IS/SE25/blob/develop/images/Robot_extended.png" />  
- -**Center button**: For RESET
- -**Randomize**: Gives a random position. 
+ - **Center button**: For RESET
+ - **Randomize**: Gives a random position. 
 
 ### 3.2 3D Simulation View (RViz)
 
