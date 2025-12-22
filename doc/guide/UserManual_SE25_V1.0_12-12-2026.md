@@ -82,19 +82,6 @@ It provides:
 
 Changes applied in the GUI are reflected instantly in the 3D view, allowing users to clearly see the effect of each action.
 
----
-
-### 3.4 Status and Feedback (TBU) 
-
-The interface continuously provides feedback to the user, including:
-- Collision warnings
-- Execution status of automated paths
-- Error or safety notifications
-
-If a collision or unsafe condition is detected, the system immediately stops the robot and displays a warning message.
-
-This feedback loop ensures that users always understand the current state of the simulation.
-
 ## 4. Setting Up the Simulation Scene
 
 This section describes how the simulation scene is initialized and how the user can restore it to a known state during execution.
@@ -145,17 +132,15 @@ This section explains how users can control the robot both manually and through 
 Manual control allows the user to move the robot joints directly in real time using the graphical user interface.
 
 **Steps to perform manual control:**
-
-1. Enable the robot using the **Enable** button in the GUI.  
-2. Adjust the **joint sliders** to move individual robot joints.  
-3. Observe the robot updating in real time in the 3D simulation view (RViz).  
-4. Press the **Reset** button to return the robot to its predefined **Home position** if needed.
+1. Adjust the **joint sliders** to move individual robot joints.  
+2. Observe the robot updating in real time in the 3D simulation view (RViz).  
+3. Press the **Reset** button to return the robot to its predefined **Home position** if needed.
 
 Manual control is useful for testing individual joint movements, understanding robot behavior, and verifying safety during operation.
 
 ---
 
-### 5.2 Programmed (Automated) Control (TBU)
+### 5.2 Programmed (Automated) Control (DELETE???)
 
 Automated control allows the robot to follow predefined sequences of poses using the **Path Manager** panel.
 
