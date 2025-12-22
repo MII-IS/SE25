@@ -45,7 +45,7 @@ This section explains how to install, build, and run the robot simulation as des
 Installation and build instructions are maintained in the repository source folder to avoid duplication and keep the User Manual aligned with the latest setup procedure.
 
 Please follow the README located in:
-- [src README](src/README.md) (the README inside the `src/` folder)
+- [src README](../src/README.md) (the README inside the `src/` folder)
 
 That README includes the full step-by-step procedure to:
 - Install the required packages (ROS 2 Jazzy, RViz 2, colcon, rosdep, etc.)
