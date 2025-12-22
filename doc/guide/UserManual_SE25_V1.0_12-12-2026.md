@@ -164,13 +164,6 @@ This can be done by:
 Resetting the scene returns the robot to its predefined **Home position** and stops any ongoing motion, allowing the user to safely resume operation from a stable configuration.
 
 ## 5. Controlling the Robot
-
-This section explains how users can control the robot both manually and through automated motion sequences.
-
----
-
-### 5.1 Manual Control
-
 Manual control allows the user to move the robot joints directly in real time using the graphical user interface.
 
 **Steps to perform manual control:**
@@ -179,19 +172,6 @@ Manual control allows the user to move the robot joints directly in real time us
 3. Press the **Reset** button to return the robot to its predefined **Home position** if needed.
 
 Manual control is useful for testing individual joint movements, understanding robot behavior, and verifying safety during operation.
-
----
-
-### 5.2 Programmed (Automated) Control (DELETE???)
-
-Automated control allows the robot to follow predefined sequences of poses using the **Path Manager** panel.
-
-**Steps to execute automated motion:**
-
-1. Open the **Path Manager** panel in the GUI.  
-2. Define one or more target poses for the robot to reach.  
-3. Configure the timing, velocity limits, and interpolation settings for each movement.  
-4. Press **Execute Path** to start the automated sequence.
 
 
 ## 6. Troubleshooting & FAQ
