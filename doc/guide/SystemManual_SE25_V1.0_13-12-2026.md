@@ -20,7 +20,7 @@ Clone the repository into your ROS 2 workspace `src` directory. We strictly use 
 
 ```bash
 cd ~
-git clone -b develop https://github.com/MII-IS/SE25.git
+git clone -b main https://github.com/MII-IS/SE25.git
 cd SE25
 ```
 ### 1.2 Dependencies
