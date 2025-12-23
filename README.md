@@ -580,25 +580,15 @@ This project has no license.
 
 
 | Role | Name | GitHub Handle |
-
 | :--- | :--- | :--- |
-
 | Project Manager | Ricardo Sanz | @rsanz |
-
 | System Architect | Ricardo Sanz | @rsanz |
-
 | Requirements Lead | Javier Pulido | @Pulido1822 |
-
 | Design Lead | Pablo Fraile | @PabloFraile |
-
 | Implementation Lead | Adela Zapatera | @adelazapatera |
-
 | Integration Lead | Victor Rodríguez | @Victor23RR |
-
 | QA Lead | Daniel D'Alascio | @danieldalascio |
-
 | Documentation Manager | Elisa Oyaregui | @elisa109 |
-
 | Configuration Manager | Rodrigo Condato | @rodrigocondado |
 
 
