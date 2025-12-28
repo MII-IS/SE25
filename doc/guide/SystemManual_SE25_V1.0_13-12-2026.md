@@ -121,7 +121,8 @@ SE25/
 ├── images/                         # Diagrams and visual assets (UML, SysML, architecture)
 │
 ├── models/                         # System and software models
-│   ├── Requisitos/                 # Requirements and SysML models
+│   ├── Enhancement_Model/                 
+│   ├── Requirements/                 # Requirements and SysML models
 │   ├── Reverse_model/              # Reverse-engineered UML models
 │   └── README.md
 │
