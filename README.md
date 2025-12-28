@@ -75,9 +75,7 @@ The system is designed to fulfill the following core operational scenarios:
 
 2.  **Manual Control:** The user manually controls the individual joints of the robotic arm in real-time via the control interface.
 
-3.  **Automated Path Execution:** The user defines a sequence of target poses, and the system calculates and executes a smooth trajectory for the robot to follow.
-
-4.  **Fault Detection and Response:** The system detects a collision in the simulation, immediately halts the robot's motion, and notifies the user.
+3.  **Automated Path Execution:** The user defines a sequence of joint movements, and the system executes accordingly.
 
 
 
@@ -197,7 +195,7 @@ This directory contains images used throughout the documentation, such as:
 
 This directory contains all system modeling artifacts, typically produced with UML or similar methodologies.
 
-#### 3.1 `models/Requisitos`
+#### 3.1 `models/Requirements`
 
 Contains requirement-related models, including:
 
@@ -214,6 +212,7 @@ Contains models generated through reverse engineering, such as:
 - Dependency diagrams  
 - Automatically generated structural representations  
 
+Enhancement Model also included.
 The `README.md` within the `models` directory provides a detailed description of UML and SysML models, including their structure, purpose, and modeling approach used in the project.
 
 ---
@@ -413,10 +412,6 @@ The GUI allows direct interaction with the robot:
 
 * **Base slider** (robot_extended only): Translate the robot horizontally
 
-* **Status panel**: Shows warnings, errors, and collision events
-
-* **Path manager**: Load, define, and execute automated paths
-
 
 
 All changes in the GUI are reflected in real time in RViz.
@@ -441,7 +436,7 @@ Manual control is the simplest mode of operation:
 
 3. The robot updates in real time in the simulation.
 
-4. Press **Reset** to return to the home position.
+4. Press **Center** to return to the home position.
 
 
 
@@ -453,21 +448,7 @@ Manual control is the simplest mode of operation:
 
 
 
-The system can execute predefined trajectories automatically:
-
-
-
-1. Open the **Path Manager** in the GUI.
-
-2. Add one or more **poses** for the robot to reach.
-
-3. Configure timing, interpolation type, and velocity limits.
-
-4. Press **Execute Path** to run the trajectory.
-
-
-
-The system will halt automatically in case of a collision or if **Emergency Stop** is pressed.
+The system can execute predefined movements of the joints with a script (example used in automated testing).
 
 
 
@@ -529,7 +510,7 @@ ros2 control switch_controller --start <controller_name>
 
 3. Launch the system with the provided ROS 2 launch file.
 
-4. Use the GUI to control the robot manually or execute automated trajectories.
+4. Use the GUI to control the robot manually or execute automated movements.
 
 5. Use ROS 2 commands to monitor and interact with the system if required.
 
