@@ -1,19 +1,19 @@
 #include <gtest/gtest.h>
 #include <cmath>
 
-// TEST 1: Verificar que la lógica matemática del robot es coherente
-// Comprobamos que el movimiento del "hombro" (coseno) está dentro de los límites
+// TEST 1: Verify that the robot's mathematical logic is consistent.
+// We check that the "shoulder" movement (cosine) stays within limits.
 TEST(RobotBailarinTest, CheckMathLogic) {
-  double t = 1.0; // Simulamos 1 segundo
-  double hombro = std::cos(t * 1.0) * 0.8;
+  double t = 1.0; // Simulate 1 second
+  double shoulder = std::cos(t * 1.0) * 0.8; // Changed variable name to 'shoulder' for consistency
   
-  // El coseno * 0.8 nunca debe ser mayor que 0.8 ni menor que -0.8
-  EXPECT_LE(hombro, 0.8);
-  EXPECT_GE(hombro, -0.8);
+  // The cosine * 0.8 must never be greater than 0.8 or less than -0.8
+  EXPECT_LE(shoulder, 0.8);
+  EXPECT_GE(shoulder, -0.8);
 }
 
-// TEST 2: Test simple de sanidad (Smoke Test)
-// Verifica que 1+1 es 2 (para asegurar que el sistema de test compila bien)
+// TEST 2: Simple Sanity Check (Smoke Test)
+// Verifies that 2 + 2 equals 4 (to ensure the test system compiles correctly).
 TEST(RobotBailarinTest, SanityCheck) {
   EXPECT_EQ(2 + 2, 4);
 }
