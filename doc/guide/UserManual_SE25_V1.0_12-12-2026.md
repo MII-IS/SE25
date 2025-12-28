@@ -5,10 +5,8 @@
 ### **1.1 Purpose**
 SE25 is a modular software system designed for **robot simulation, visualization, and control**. It enables users to:
 - Simulate 6-DOF robotic manipulators, mobile robots, and custom mechanisms
-- Perform path planning, inverse kinematics, and collision checking
-- Build virtual environments with obstacles, fixtures, and workpieces
 - Execute motion scripts and test robot behavior safely before deployment
-- Iintegrate with ROS2, RViz, and Gazebo
+- Iintegrate with ROS2 and RViz
 - Import robot models in URDF, SDF, or custom formats.
 
 ### **1.2 Prerequisites**
@@ -120,7 +118,6 @@ The control interface acts as the **command center** of the system.
 It provides:
 - **Joint sliders** for each robot joint
 - **Base movement slider** (extended robot only)
-- **Path Manager** for automated motion execution
 
 Changes applied in the GUI are reflected instantly in the 3D view, allowing users to clearly see the effect of each action.
 
@@ -159,7 +156,7 @@ The environment configuration is predefined. Interaction with or modification of
 At any time during operation, the user can restore the system to a known initial state.
 
 This can be done by:
-- Pressing the **Reset** button in the graphical user interface
+- Pressing the **Center** button in the graphical user interface
 
 Resetting the scene returns the robot to its predefined **Home position** and stops any ongoing motion, allowing the user to safely resume operation from a stable configuration.
 
@@ -169,7 +166,7 @@ Manual control allows the user to move the robot joints directly in real time us
 **Steps to perform manual control:**
 1. Adjust the **joint sliders** to move individual robot joints.  
 2. Observe the robot updating in real time in the 3D simulation view (RViz).  
-3. Press the **Reset** button to return the robot to its predefined **Home position** if needed.
+3. Press the **Center** button to return the robot to its predefined **Home position** if needed.
 
 Manual control is useful for testing individual joint movements, understanding robot behavior, and verifying safety during operation.
 
@@ -212,6 +209,3 @@ Include the following information when submitting an issue:
 
 - **DOF (Degree of Freedom):** An independent axis of motion for the robot.  
 - **RViz:** ROS 2 visualization tool used to display the robot and its environment.  
-- **Trajectory:** A sequence of robot poses executed over time.  
-- **Emergency Stop:** A control that immediately halts all robot motion.  
-- **Path Manager:** GUI component used to define and execute automated motion sequences.
