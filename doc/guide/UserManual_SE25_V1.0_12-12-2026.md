@@ -11,12 +11,12 @@ SE25 is a modular software system designed for **robot simulation, visualization
 
 ### **1.2 Prerequisites**
 
-#### **Operating System Compatibility** (TBC)
+#### **Operating System Compatibility** 
 - **Linux (Ubuntu 22.04 recommended)**: full and easiest support 
 - **Windows**: not supported
 - **macOS** : not supported
 
-#### **Hardware Requirements** (TBC)
+#### **Hardware Requirements** 
 - **CPU:** Dual-core or better  
 - **RAM:** *8 GB minimum* (16 GB recommended)  
 - **GPU:** OpenGL 3.3+ compatible GPU (dedicated GPU recommended)  
